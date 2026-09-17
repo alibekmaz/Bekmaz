@@ -341,7 +341,7 @@ class ScrollCharacter extends HTMLElement {
     x.fillText('Let\u2019s design', ax + 34, ay + 96);
     x.fillText('your ideas', ax + 34, ay + 146);
     x.fillStyle = dim; x.font = '400 20px Inter, sans-serif';
-    x.fillText('Product designer, three years of work.', ax + 34, ay + 196);
+    x.fillText('Product designer, five years of work.', ax + 34, ay + 196);
     x.fillStyle = accent; x.fillRect(ax + 34, ay + 226, 148, 44);
     x.fillStyle = 'rgba(245,243,238,.14)'; x.fillRect(ax + 196, ay + 226, 148, 44);
     x.fillStyle = 'rgba(245,243,238,.08)'; x.fillRect(ax + 34, ay + 300, aw - 68, ah - 340);

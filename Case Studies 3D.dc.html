@@ -18,27 +18,19 @@
     a { color:#FF5A36; }
     a:hover { color:#ff8163; }
     @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+  
   </style>
 </helmet>
 
 <div style="position:relative; font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE;">
 
-  <x-import component-from-global-scope="scroll-character" from="./scroll-character.js?v=31" hint-size="100%,100vh"></x-import>
+  <x-import component-from-global-scope="scroll-character" from="./scroll-character.js?v=31" hint-size="100%,100vh" style="position:fixed; inset:0; z-index:0;"></x-import>
 
-  <header style="position:fixed; top:0; left:0; right:0; z-index:20; display:flex; align-items:center; justify-content:space-between; padding:20px 44px; background:linear-gradient(#0B0B0Dcc,#0B0B0D00); backdrop-filter:blur(6px);">
-    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none;"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
-    <nav style="display:flex; gap:32px; font-size:15px;">
-      <a href="Home.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Home</a>
-      <a href="#" style="color:#F5F3EE; text-decoration:none;">Case Studies</a>
-      <a href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">About</a>
-      <a href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Contact</a>
-    </nav>
-    <a href="https://drive.google.com/file/d/1sOhIY6ef7Ywf9dq4sP2yFjvvoFrg0uWO/view?usp=sharing" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none;" style-hover="background:#ff7654">Download CV</a>
-  </header>
+  <dc-import name="SiteNav" active="case" cv-href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" hint-size="100%,74px" style="position:fixed; top:0; left:0; right:0; z-index:30;"></dc-import>
 
   <section style="position:relative; z-index:10; height:100vh; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:0 clamp(24px,7vw,120px); pointer-events:none; scroll-snap-align:center;">
     <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(38px,5.4vw,74px); font-weight:600; line-height:1.03; letter-spacing:-.03em; margin:0; max-width:11em; text-shadow:0 8px 40px rgba(0,0,0,.6);">Let's design your ideas together</h1>
-    <p style="max-width:430px; font-size:17px; line-height:1.6; color:rgba(245,243,238,.7); margin:22px 0 0;">Product designer, three years of user-centered work. Scroll to move around the scene.</p>
+    <p style="max-width:430px; font-size:17px; line-height:1.6; color:rgba(245,243,238,.7); margin:22px 0 0;">Product designer, five years of user-centered work. Scroll to move around the scene.</p>
     <div style="margin-top:44px; font-size:13px; letter-spacing:.08em; color:rgba(245,243,238,.45); animation:bob 2.4s ease-in-out infinite;">SCROLL GENTLY ↓</div>
   </section>
 
@@ -60,7 +52,7 @@
     <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(36px,5vw,64px); font-weight:600; letter-spacing:-.02em; margin:0 0 14px;">Thank you</h2>
     <p style="font-size:17px; color:rgba(245,243,238,.6); max-width:400px; margin:0 auto 36px; line-height:1.6;">Happy to see you here. A few useful links.</p>
     <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
-      <a href="https://drive.google.com/file/d/1sOhIY6ef7Ywf9dq4sP2yFjvvoFrg0uWO/view?usp=sharing" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:999px; font:600 15px 'Inter',sans-serif; text-decoration:none;" style-hover="background:#fff">Download CV</a>
+      <a href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:999px; font:600 15px 'Inter',sans-serif; text-decoration:none;" style-hover="background:#fff">Download CV</a>
       <a href="About.dc.html" style="border:1px solid rgba(245,243,238,.3); color:#F5F3EE; padding:14px 26px; border-radius:999px; font:600 15px 'Inter',sans-serif; text-decoration:none;" style-hover="border-color:#F5F3EE">About me</a>
     </div>
   </footer>

@@ -15,21 +15,13 @@
     ::selection { background:#FF5A36; color:#0B0B0D; }
     a { color:#FF5A36; }
     a:hover { color:#ff8163; }
+  
   </style>
 </helmet>
 
 <div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh;">
 
-  <header style="position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px clamp(20px,5vw,44px); background:linear-gradient(#0B0B0Dee,#0B0B0Dcc); backdrop-filter:blur(6px); border-bottom:1px solid rgba(245,243,238,.07);">
-    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none;"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
-    <nav style="display:flex; gap:clamp(16px,2.4vw,32px); font-size:15px; flex-wrap:wrap;">
-      <a href="Home.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Home</a>
-      <a href="Case Studies 3D.dc.html" style="color:#F5F3EE; text-decoration:none;">Case Studies</a>
-      <a href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">About Me</a>
-      <a href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Contact</a>
-    </nav>
-    <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;" style-hover="background:#ff7654">Download CV</a>
-  </header>
+  <dc-import name="SiteNav" active="case" cv-href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" hint-size="100%,74px" style="position:sticky; top:0; z-index:30;"></dc-import>
 
   <div style="position:fixed; top:72px; left:0; right:0; z-index:19; transform:{{ barShift }}; opacity:{{ barOpacity }}; transition:transform .32s cubic-bezier(.2,.7,.2,1), opacity .24s ease; background:rgba(11,11,13,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,.09);">
     <div style="display:flex; align-items:center; gap:clamp(12px,2vw,24px); max-width:1180px; margin:0 auto; padding:12px clamp(24px,7vw,120px);">

@@ -15,30 +15,25 @@
     ::selection { background:#FF5A36; color:#0B0B0D; }
     a { color:#FF5A36; }
     a:hover { color:#ff8163; }
+  
+      @media (max-width:720px) {
+      [data-m="hero-art"] { order:-1; }
+    }
   </style>
 </helmet>
 
 <div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh;">
 
-  <header style="position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px clamp(20px,5vw,44px); background:linear-gradient(#0B0B0Dee,#0B0B0Dcc); backdrop-filter:blur(6px); border-bottom:1px solid rgba(245,243,238,.07);">
-    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none;"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
-    <nav style="display:flex; gap:clamp(16px,2.4vw,32px); font-size:15px; flex-wrap:wrap;">
-      <a href="Home.dc.html" style="color:#F5F3EE; text-decoration:none;">Home</a>
-      <a href="Case Studies 3D.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Case Studies</a>
-      <a href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">About Me</a>
-      <a href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Contact</a>
-    </nav>
-    <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;" style-hover="background:#ff7654">Download CV</a>
-  </header>
+  <dc-import name="SiteNav" active="home" cv-href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" hint-size="100%,74px" style="position:sticky; top:0; z-index:30;"></dc-import>
 
   <section style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(32px,5vw,72px); align-items:center; padding:clamp(48px,8vw,110px) clamp(24px,7vw,120px) clamp(40px,6vw,80px);">
     <div style="min-width:0;">
       <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(40px,6vw,80px); font-weight:600; line-height:1.02; letter-spacing:-.03em; margin:0;">Ali Bekmaz</h1>
       <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(20px,2.4vw,30px); font-weight:500; letter-spacing:-.01em; color:#FF5A36; margin:14px 0 28px;">Product designer</h2>
-      <p style="font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.72); margin:0 0 18px; max-width:56ch; text-wrap:pretty;">User-centered UX/UI Designer with 3+ years of experience creating intuitive, data-driven digital experiences in <strong style="color:#F5F3EE; font-weight:600;">SaaS</strong>, <strong style="color:#F5F3EE; font-weight:600;">MasS</strong>, <strong style="color:#F5F3EE; font-weight:600;">B2B</strong> and <strong style="color:#F5F3EE; font-weight:600;">B2C</strong> environments across <strong style="color:#F5F3EE; font-weight:600;">E-commerce</strong>, <strong style="color:#F5F3EE; font-weight:600;">Marketplace</strong>, <strong style="color:#F5F3EE; font-weight:600;">Finance</strong>, <strong style="color:#F5F3EE; font-weight:600;">Healthcare</strong> and <strong style="color:#F5F3EE; font-weight:600;">Legal platforms.</strong></p>
-      <p style="font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.72); margin:0 0 36px; max-width:56ch; text-wrap:pretty;">Skilled in user research, wire-framing, prototyping, and design systems, with a strong ability to balance business goals with user needs. A background in computer engineering facilitates seamless collaboration with developers, while a master's in project management enhances strategic decision-making.</p>
+      <p style="font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.72); margin:0 0 18px; max-width:56ch; text-wrap:pretty;">User-centered UX/UI Designer with 5+ years of experience creating intuitive, data-driven digital experiences in <strong style="color:#F5F3EE; font-weight:600;">SaaS</strong>, <strong style="color:#F5F3EE; font-weight:600;">MaaS</strong>, <strong style="color:#F5F3EE; font-weight:600;">B2B</strong> and <strong style="color:#F5F3EE; font-weight:600;">B2C</strong> environments across <strong style="color:#F5F3EE; font-weight:600;">E-commerce</strong>, <strong style="color:#F5F3EE; font-weight:600;">Marketplace</strong>, <strong style="color:#F5F3EE; font-weight:600;">Finance</strong>, <strong style="color:#F5F3EE; font-weight:600;">Healthcare</strong> and <strong style="color:#F5F3EE; font-weight:600;">Legal platforms.</strong></p>
+      <p style="font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.72); margin:0 0 36px; max-width:56ch; text-wrap:pretty;">Skilled in user research, wire-framing, prototyping, and design systems. A background in computer engineering facilitates seamless collaboration with developers, while a master's in project management enhances strategic decision-making and balancing business goals with user needs. I adapt the design process to the situation, working fast-paced when speed matters and detail-oriented when precision does, and I use <strong style="color:#F5F3EE; font-weight:600;">AI</strong> wherever it can genuinely speed the work up.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="display:flex; flex-direction:column; gap:2px; background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none;" style-hover="background:#ffffff">
+        <a href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" style="display:flex; flex-direction:column; gap:2px; background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none;" style-hover="background:#ffffff">
           <span style="font:600 15px 'Space Grotesk',sans-serif;">Download CV</span>
           <span style="font-size:12.5px; opacity:.6;">PDF Format</span>
         </a>
@@ -48,7 +43,7 @@
         </a>
       </div>
     </div>
-    <div style="min-width:0; display:flex; justify-content:center;">
+    <div data-m="hero-art" style="min-width:0; display:flex; justify-content:center;">
       <x-import component-from-global-scope="desk-character" from="./desk-character.js" aria-label="Animated 3D character working at a laptop" style="width:100%; max-width:420px; aspect-ratio:1; border-radius:24px; background:radial-gradient(120% 120% at 30% 15%, #241A18, #0F0E10 70%); border:1px solid rgba(245,243,238,.1)" hint-size="100%,420px"></x-import>
     </div>
   </section>
@@ -85,7 +80,7 @@
     <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(30px,4vw,52px); font-weight:600; letter-spacing:-.02em; margin:0 0 12px;">Happy to see you here!</h2>
     <p style="font-size:17px; color:rgba(245,243,238,.6); margin:0 0 36px;">Here's some useful links:</p>
     <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
-      <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="display:flex; flex-direction:column; gap:2px; background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none; text-align:left;" style-hover="background:#ffffff">
+      <a href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" style="display:flex; flex-direction:column; gap:2px; background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none; text-align:left;" style-hover="background:#ffffff">
         <span style="font:600 15px 'Space Grotesk',sans-serif;">Download CV</span>
         <span style="font-size:12.5px; opacity:.6;">PDF Format</span>
       </a>

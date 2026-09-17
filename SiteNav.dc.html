@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    [data-m="toggle"] { position:absolute; width:0; height:0; opacity:0; pointer-events:none; }
+    [data-m="burger"], [data-m="xtra"] { display:none !important; }
+    [data-nav][data-active="true"] { color:#F5F3EE !important; }
+    @media (max-width:720px) {
+      [data-m="hdr"] { padding:10px 18px !important; flex-wrap:wrap; row-gap:0; background:rgba(11,11,13,.96) !important; }
+      [data-m="hdr"] img { height:26px !important; }
+      [data-m="cv"] { display:none !important; }
+      [data-m="burger"] { display:flex !important; order:3; }
+      [data-m="burger"] { transition:background .18s; }
+      [data-m="burger"]:active { background:rgba(245,243,238,.14); }
+      @media (hover:hover) {
+        [data-m="burger"]:hover { background:rgba(245,243,238,.08); }
+      }
+      [data-m="toggle"]:checked ~ [data-m="burger"] span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+      [data-m="toggle"]:checked ~ [data-m="burger"] span:nth-child(2) { opacity:0; }
+      [data-m="toggle"]:checked ~ [data-m="burger"] span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+      [data-m="nav"] { display:none !important; order:4; width:100%; flex-direction:column; gap:0 !important; margin-top:6px; border-top:1px solid rgba(245,243,238,.1); }
+      [data-m="toggle"]:checked ~ [data-m="nav"] { display:flex !important; }
+      [data-m="nav"] [data-nav] { padding:15px 2px; font-size:15.5px; border-bottom:1px solid rgba(245,243,238,.07); }
+      [data-m="xtra"] { display:flex !important; }
+    }
+  </style>
+</helmet>
+
+<header data-m="hdr" style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px clamp(20px,5vw,44px); background:linear-gradient(#0B0B0Dee,#0B0B0Dcc); backdrop-filter:blur(6px); border-bottom:1px solid rgba(245,243,238,.07); font-family:'Inter',sans-serif;">
+  <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none; opacity:1; transition:opacity .18s;" style-hover="opacity:.72"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
+
+  <input data-m="toggle" type="checkbox" id="mnav" aria-label="Menu">
+  <label data-m="burger" for="mnav" style="flex-direction:column; justify-content:center; align-items:center; gap:5px; width:44px; height:44px; cursor:pointer; border-radius:10px;">
+    <span style="display:block; width:22px; height:2px; background:#F5F3EE; border-radius:2px; transition:transform .2s, opacity .2s;"></span>
+    <span style="display:block; width:22px; height:2px; background:#F5F3EE; border-radius:2px; transition:transform .2s, opacity .2s;"></span>
+    <span style="display:block; width:22px; height:2px; background:#F5F3EE; border-radius:2px; transition:transform .2s, opacity .2s;"></span>
+  </label>
+
+  <nav data-m="nav" style="display:flex; gap:clamp(16px,2.4vw,32px); font-size:15px; flex-wrap:wrap;">
+    <a data-nav="home" data-active="{{ isHome }}" href="Home.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none; transition:color .18s;" style-hover="color:#F5F3EE">Home</a>
+    <a data-nav="case" data-active="{{ isCase }}" href="Case Studies 3D.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none; transition:color .18s;" style-hover="color:#F5F3EE">Case Studies</a>
+    <a data-nav="about" data-active="{{ isAbout }}" href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none; transition:color .18s;" style-hover="color:#F5F3EE">About</a>
+    <a data-nav="contact" data-active="{{ isContact }}" href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none; transition:color .18s;" style-hover="color:#F5F3EE">Contact</a>
+
+    <div data-m="xtra" style="align-items:center; gap:10px; padding:14px 2px 6px;">
+      <a href="{{ cvUrl }}" target="_blank" rel="noopener" style="flex:1; min-height:44px; display:flex; align-items:center; justify-content:center; background:#FF5A36; color:#0B0B0D; border-radius:999px; font:600 14px 'Inter',sans-serif; text-decoration:none; transition:background .18s, transform .12s;" style-hover="background:#ff7654" style-active="transform:scale(.97); background:#e84a28">Download CV</a>
+      <a href="https://www.linkedin.com/in/alibekmaz/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; flex:none; border:1px solid rgba(245,243,238,.25); border-radius:999px; color:#F5F3EE; font:600 14px 'Inter',sans-serif; text-decoration:none; transition:background .18s, border-color .18s, transform .12s;" style-hover="background:rgba(245,243,238,.1); border-color:rgba(245,243,238,.5)" style-active="transform:scale(.94)">in</a>
+      <a href="https://www.behance.net/alibekmaz" target="_blank" rel="noopener" aria-label="Behance" style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; flex:none; border:1px solid rgba(245,243,238,.25); border-radius:999px; color:#F5F3EE; font:600 14px 'Inter',sans-serif; text-decoration:none; transition:background .18s, border-color .18s, transform .12s;" style-hover="background:rgba(245,243,238,.1); border-color:rgba(245,243,238,.5)" style-active="transform:scale(.94)">Bē</a>
+    </div>
+  </nav>
+
+  <a data-m="cv" href="{{ cvUrl }}" target="_blank" rel="noopener" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background .18s, transform .12s;" style-hover="background:#ff7654" style-active="transform:scale(.97); background:#e84a28">Download CV</a>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100,&quot;height&quot;:80},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;case&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;cvHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const a = this.props.active || 'home';
+    return {
+      isHome: String(a === 'home'),
+      isCase: String(a === 'case'),
+      isAbout: String(a === 'about'),
+      isContact: String(a === 'contact'),
+      cvUrl: this.props.cvHref || 'https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view'
+    };
+  }
+}
+</script>
+</body>
+</html>
