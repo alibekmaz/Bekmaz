@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #0B0B0D; }
+    * { box-sizing: border-box; }
+    ::selection { background: #FF5A36; color: #0B0B0D; }
+    @keyframes bob { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(8px); } }
+    @keyframes spin-slow { from{ transform: rotate(0deg);} to{ transform: rotate(360deg);} }
+  </style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh; overflow-x:hidden;">
+
+  <!-- Header -->
+  <header style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; background:rgba(11,11,13,0.75); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,0.08);">
+    <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.02em;">./</div>
+    <nav style="display:flex; gap:36px; font-size:15px; color:rgba(245,243,238,0.7);">
+      <a href="#" style="color:rgba(245,243,238,0.7); text-decoration:none;" style-hover="color:#F5F3EE;">Home</a>
+      <a href="#" style="color:#F5F3EE; text-decoration:none; position:relative;">Case Studies</a>
+      <a href="#" style="color:rgba(245,243,238,0.7); text-decoration:none;" style-hover="color:#F5F3EE;">About Me</a>
+      <a href="#" style="color:rgba(245,243,238,0.7); text-decoration:none;" style-hover="color:#F5F3EE;">Contact</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <a href="#" aria-label="LinkedIn" style="color:rgba(245,243,238,0.6); text-decoration:none;" style-hover="color:#F5F3EE;">in</a>
+      <a href="#" aria-label="Behance" style="color:rgba(245,243,238,0.6); text-decoration:none;" style-hover="color:#F5F3EE;">Be</a>
+      <a href="#" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none;" style-hover="background:#ff7654;">Download CV</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="position:relative; min-height:88vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px 24px 40px; overflow:hidden;">
+    <div style="position:absolute; top:10%; left:8%; width:320px; height:320px; border-radius:50%; background:radial-gradient(circle at 30% 30%, rgba(255,90,54,0.35), transparent 70%); filter:blur(40px); animation:spin-slow 30s linear infinite;"></div>
+    <div style="position:absolute; bottom:5%; right:10%; width:280px; height:280px; border-radius:50%; background:radial-gradient(circle at 60% 40%, rgba(108,132,255,0.3), transparent 70%); filter:blur(40px); animation:spin-slow 40s linear infinite reverse;"></div>
+
+    <span style="font-size:14px; color:rgba(245,243,238,0.55); letter-spacing:0.04em; margin-bottom:24px;">UI/UX &amp; Product Designer, Berlin</span>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(40px,6vw,84px); font-weight:600; line-height:1.05; letter-spacing:-0.03em; max-width:900px; margin:0 0 24px;">
+      Let's design your ideas together
+    </h1>
+    <p style="max-width:560px; font-size:18px; line-height:1.6; color:rgba(245,243,238,0.65); margin:0;">
+      Product designer with 3 years of user-centered, detail-oriented experience building collaborative, adaptable solutions.
+    </p>
+
+    <div style="margin-top:56px; display:flex; flex-direction:column; align-items:center; gap:8px; animation:bob 2.4s ease-in-out infinite;">
+      <span style="font-size:14px; color:rgba(245,243,238,0.5);">Scroll Gently</span>
+      <span style="font-size:20px;">👇</span>
+    </div>
+  </section>
+
+  <!-- Section label -->
+  <div style="text-align:center; padding:60px 24px 20px;">
+    <span style="font-size:13px; letter-spacing:0.08em; color:#FF5A36; text-transform:uppercase;">Selected Work</span>
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,4vw,44px); font-weight:600; margin:12px 0 0; letter-spacing:-0.02em;">Case Studies</h2>
+  </div>
+
+  <!-- Stacked 3D card scroller -->
+  <div ref="{{ stackRef }}" style="position:relative; perspective:1600px;">
+    <sc-for list="{{ caseStudies }}" as="cs" hint-placeholder-count="4">
+      <div class="cs-section" style="position:relative; height:100vh; display:flex; align-items:center; justify-content:center;">
+        <a
+          href="{{ cs.link }}"
+          target="_blank"
+          rel="noopener"
+          class="cs-card"
+          ref="{{ cs.setRef }}"
+          style="position:sticky; top:{{ cs.stickyTop }}; width:min(920px,88vw); min-height:420px; display:grid; grid-template-columns:1fr 1fr; gap:0; background:#16161A; border:1px solid rgba(245,243,238,0.1); border-radius:24px; overflow:hidden; text-decoration:none; color:#F5F3EE; box-shadow:0 30px 60px -20px rgba(0,0,0,0.6); will-change:transform;"
+        >
+          <div style="display:flex; flex-direction:column; justify-content:center; padding:56px; gap:18px;">
+            <span style="font-size:13px; color:{{ cs.accent }}; font-weight:600; letter-spacing:0.04em;">{{ cs.tag }}</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,2.6vw,32px); font-weight:600; line-height:1.2; margin:0; letter-spacing:-0.02em;">{{ cs.title }}</h3>
+            <p style="font-size:16px; line-height:1.65; color:rgba(245,243,238,0.65); margin:0;">{{ cs.description }}</p>
+            <span style="display:inline-flex; align-items:center; gap:8px; margin-top:12px; font-size:15px; font-weight:600; color:{{ cs.accent }};">View case study →</span>
+          </div>
+          <div style="position:relative; background:{{ cs.bg }}; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <div style="width:70%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 60%), {{ cs.bg }};"></div>
+            <span style="position:absolute; font-family:'Space Grotesk',sans-serif; font-size:120px; font-weight:700; color:rgba(255,255,255,0.18);">{{ cs.index }}</span>
+          </div>
+        </a>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- Footer -->
+  <footer style="position:relative; padding:140px 24px 60px; text-align:center; border-top:1px solid rgba(245,243,238,0.08); margin-top:40px;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(36px,5vw,64px); font-weight:600; letter-spacing:-0.02em; margin:0 0 16px;">Thank you</h2>
+    <p style="font-size:17px; color:rgba(245,243,238,0.6); max-width:420px; margin:0 auto 40px; line-height:1.6;">Happy to see you here! Here are some useful links.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:80px;">
+      <a href="#" style="background:#F5F3EE; color:#0B0B0D; padding:14px 28px; border-radius:999px; font-size:15px; font-weight:600; text-decoration:none;" style-hover="background:#fff;">Download CV (PDF)</a>
+      <a href="#" style="border:1px solid rgba(245,243,238,0.3); color:#F5F3EE; padding:14px 28px; border-radius:999px; font-size:15px; font-weight:600; text-decoration:none;" style-hover="border-color:#F5F3EE;">About me (Know me more)</a>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; padding-top:32px; border-top:1px solid rgba(245,243,238,0.08); font-size:14px; color:rgba(245,243,238,0.45);">
+      <span>© 2026 · Designed with care</span>
+      <div style="display:flex; gap:24px;">
+        <a href="#" style="color:rgba(245,243,238,0.45); text-decoration:none;" style-hover="color:#F5F3EE;">LinkedIn</a>
+        <a href="#" style="color:rgba(245,243,238,0.45); text-decoration:none;" style-hover="color:#F5F3EE;">Behance</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const CASE_STUDIES = [
+  { tag: "Landing Page · Data-Driven UX", title: "Data-driven landing page redesign, backed by MVP insights", description: "A legal-services platform helping users find the right lawyer. After studying MVP usage data, we reworked the landing page to lift acquisition and clarify the value proposition.", accent: "#FF5A36", bg: "linear-gradient(135deg,#3a1f14,#1a0d08)", index: "01", link: "#" },
+  { tag: "B2B Product · Landing Redesign", title: "A landing page redesign for a B2B communication tool", description: "A team-communication platform for a regional market. This case study walks through our goals, research, and the redesign steps we took to reach them.", accent: "#6C84FF", bg: "linear-gradient(135deg,#161b3a,#0a0d1c)", index: "02", link: "#" },
+  { tag: "Gaming · MVP in Two Weeks", title: "Designing a video-game competition hub", description: "A platform letting players wager against each other across popular titles. This MVP was scoped and shipped in two weeks flat.", accent: "#3AD1A0", bg: "linear-gradient(135deg,#0f2e26,#08150f)", index: "03", link: "#" },
+  { tag: "Fintech · Digital KYC", title: "Designing a KYC flow for a stock brokerage", description: "A brokerage operating in a tightly regulated market. We turned a paper-based KYC process into a fully digital flow, working through real regulatory constraints.", accent: "#F2C230", bg: "linear-gradient(135deg,#332a0d,#171204)", index: "04", link: "#" }
+];
+
+class Component extends DCLogic {
+  cards = [];
+
+  componentDidMount() {
+    this.onScroll = () => this.updateStack();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.raf = requestAnimationFrame(() => this.updateStack());
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+
+  updateStack() {
+    const n = this.cards.length;
+    this.cards.forEach((el, i) => {
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const stickyTop = 96 + i * 16;
+      // how far past its sticky point (i.e. how much the next card has scrolled over it)
+      const overlap = Math.max(0, stickyTop - rect.top + (window.innerHeight - rect.top - rect.height));
+      // progress of this card being covered by the NEXT one, based on next section's scroll
+      const nextEl = this.cards[i + 1];
+      let progress = 0;
+      if (nextEl) {
+        const nextRect = nextEl.getBoundingClientRect();
+        const dist = stickyTop - nextRect.top + (rect.height - 40);
+        progress = Math.min(1, Math.max(0, (window.innerHeight - nextRect.top) / window.innerHeight));
+        progress = Math.min(1, Math.max(0, (stickyTop + rect.height - nextRect.top) / (rect.height * 0.9)));
+      }
+      const scale = 1 - progress * 0.06;
+      const translateY = -progress * 24;
+      const rotateX = progress * 6;
+      const brightness = 1 - progress * 0.35;
+      el.style.transform = `translateY(${translateY}px) scale(${scale}) rotateX(${rotateX}deg)`;
+      el.style.filter = `brightness(${brightness})`;
+      el.style.zIndex = String(100 + i);
+    });
+    this.raf = requestAnimationFrame(() => this.updateStack());
+  }
+
+  renderVals() {
+    return {
+      caseStudies: CASE_STUDIES.map((cs, i) => ({
+        ...cs,
+        stickyTop: `${96 + i * 16}px`,
+        setRef: (el) => { this.cards[i] = el; }
+      })),
+      stackRef: () => {}
+    };
+  }
+}
+
+</script>
+</body>
+</html>

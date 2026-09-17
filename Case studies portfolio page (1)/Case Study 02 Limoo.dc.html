@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#0B0B0D; }
+    * { box-sizing:border-box; }
+    ::selection { background:#FF5A36; color:#0B0B0D; }
+    a { color:#FF5A36; }
+    a:hover { color:#ff8163; }
+  </style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh;">
+
+  <header style="position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px clamp(20px,5vw,44px); background:linear-gradient(#0B0B0Dee,#0B0B0Dcc); backdrop-filter:blur(6px); border-bottom:1px solid rgba(245,243,238,.07);">
+    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none;"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
+    <nav style="display:flex; gap:clamp(16px,2.4vw,32px); font-size:15px; flex-wrap:wrap;">
+      <a href="Home.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Home</a>
+      <a href="Case Studies 3D.dc.html" style="color:#F5F3EE; text-decoration:none;">Case Studies</a>
+      <a href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">About Me</a>
+      <a href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Contact</a>
+    </nav>
+    <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;" style-hover="background:#ff7654">Download CV</a>
+  </header>
+
+  <div style="position:fixed; top:72px; left:0; right:0; z-index:19; transform:{{ barShift }}; opacity:{{ barOpacity }}; transition:transform .32s cubic-bezier(.2,.7,.2,1), opacity .24s ease; background:rgba(11,11,13,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,.09);">
+    <div style="display:flex; align-items:center; gap:clamp(12px,2vw,24px); max-width:1180px; margin:0 auto; padding:12px clamp(24px,7vw,120px);">
+      <a href="Case Studies 3D.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 14px 7px 11px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)"><span style="font-size:15px; line-height:1;">←</span>All case studies</a>
+      <div style="min-width:0; flex:1; display:flex; align-items:baseline; gap:10px; overflow:hidden;">
+        <span style="font:700 13px 'Space Grotesk',sans-serif; color:#3BE0A0; flex:none;">02</span>
+        <span style="font:600 15px 'Space Grotesk',sans-serif; color:#F5F3EE; flex:none;">Limoo</span>
+        <span style="font-size:13.5px; color:rgba(245,243,238,.42); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Landing page redesign</span>
+      </div>
+      <span style="flex:none; font:600 13px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.5); font-variant-numeric:tabular-nums;">{{ readPercent }}</span>
+      <a href="Case Study 03 SamChamp.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 11px 7px 14px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)">Next: SamChamp<span style="font-size:15px; line-height:1;">→</span></a>
+    </div>
+    <div style="height:2px; background:rgba(245,243,238,.08);">
+      <div style="height:100%; width:{{ readWidth }}; background:#3BE0A0; transition:width .1s linear;"></div>
+    </div>
+  </div>
+
+  <section style="padding:clamp(40px,6vw,88px) clamp(24px,7vw,120px) clamp(32px,4vw,56px); max-width:1180px; margin:0 auto;">
+    <a href="Case Studies 3D.dc.html" style="display:inline-block; font-size:13.5px; letter-spacing:.06em; text-decoration:none; color:rgba(245,243,238,.5); margin-bottom:28px;" style-hover="color:#FF5A36">← ALL CASE STUDIES</a>
+    <div style="font-size:12px; letter-spacing:.14em; color:#3BE0A0; margin-bottom:16px;">02 · LIMOO · A TEAM COMMUNICATION PLATFORM</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(34px,5vw,64px); font-weight:600; line-height:1.06; letter-spacing:-.03em; margin:0 0 24px; max-width:22ch; text-wrap:pretty;">Landing page redesign for a team communication platform</h1>
+    <p style="font-size:17px; line-height:1.7; color:rgba(245,243,238,.7); margin:0 0 40px; max-width:60ch; text-wrap:pretty;">A case study of landing page redesign, in two weeks.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(20px,3vw,40px); padding:28px clamp(24px,3vw,36px); border-radius:20px; background:rgba(18,18,22,.7); border:1px solid rgba(245,243,238,.1);">
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">ROLE</div>
+        <div style="font-size:15px; line-height:1.5;">Product designer</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TIMELINE</div>
+        <div style="font-size:15px; line-height:1.5;">Two weeks</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TOOLS</div>
+        <div style="font-size:15px; line-height:1.5;">Figma, FigJam</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">PUBLISHED</div>
+        <div style="font-size:15px; line-height:1.5;">February 2024</div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;">
+      <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="9">
+        <span style="font-size:13.5px; padding:9px 16px; border-radius:999px; border:1px solid rgba(245,243,238,.16); color:rgba(245,243,238,.68);">{{ c }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,64px);">
+    <div style="min-width:0;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3vw,38px); font-weight:600; letter-spacing:-.025em; margin:0 0 22px;">Project description</h2>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.72); margin:0; text-wrap:pretty;">Limoo, a team communication platform tailored for the Iranian market, offers features such as chat, online meetings, file sharing, and tool integration via bots. Having successfully launched its MVP and attracted over 1,800 active users, Limoo is now aiming for expansion and is seeking new investors. To enhance its market appeal and usability, the company plans to refine its landing page design, aiming for a more delightful look that attracts both users and potential investors.</p>
+    </div>
+    <div style="min-width:0;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3vw,38px); font-weight:600; letter-spacing:-.025em; margin:0 0 22px;">Goals</h2>
+      <div style="display:grid; gap:14px;">
+        <sc-for list="{{ goals }}" as="g" hint-placeholder-count="6">
+          <div style="display:flex; gap:14px; font-size:16px; line-height:1.6; color:rgba(245,243,238,.75);">
+            <span style="color:#3BE0A0; font-weight:600; flex:none;">{{ g.num }}</span><span>{{ g.text }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 36px;">The process</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px;">
+      <sc-for list="{{ process }}" as="p" hint-placeholder-count="5">
+        <div style="min-width:0; padding:26px 24px; border-radius:18px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1); border-top:2px solid #3BE0A0;">
+          <div style="font:700 26px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.2); margin-bottom:18px;">{{ p.num }}</div>
+          <div style="display:grid; gap:10px;">
+            <sc-for list="{{ p.items }}" as="i" hint-placeholder-count="3">
+              <div style="display:flex; gap:9px; font-size:15px; line-height:1.55; color:rgba(245,243,238,.75);"><span style="color:#3BE0A0;">▪</span><span>{{ i }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); background:linear-gradient(140deg,rgba(59,224,160,.1),rgba(75,213,232,.06)); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 10px;">Key insights</h2>
+      <p style="font-size:15px; color:rgba(245,243,238,.55); margin:0 0 34px;">From brief meeting to competitive analysis, data analysis, user test and UX evaluation</p>
+      <div style="display:grid; gap:18px;">
+        <sc-for list="{{ insights }}" as="i" hint-placeholder-count="8">
+          <div style="display:flex; gap:18px; min-width:0;">
+            <span style="font:600 15px 'Space Grotesk',sans-serif; color:#3BE0A0; flex:none; width:22px;">{{ i.num }}</span>
+            <div style="min-width:0;">
+              <p style="font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.8); margin:0; text-wrap:pretty;">{{ i.text }}</p>
+              <sc-if value="{{ i.hasList }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+                  <sc-for list="{{ i.list }}" as="l" hint-placeholder-count="6">
+                    <span style="font-size:14.5px; padding:8px 15px; border-radius:10px; background:rgba(59,224,160,.12); color:#F5F3EE;">{{ l }}</span>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 30px;">Design challenges</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;">
+      <sc-for list="{{ challenges }}" as="c" hint-placeholder-count="6">
+        <div style="min-width:0; padding:26px; border-radius:16px; background:rgba(18,18,22,.6); border:1px solid rgba(245,243,238,.1); font-size:16px; line-height:1.65; color:rgba(245,243,238,.75);">{{ c }}</div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 28px;">Information architecture</h2>
+    <div style="border-radius:20px; overflow:hidden; background:#FFFFFF; border:1px solid rgba(245,243,238,.12);">
+      <img src="./assets/limoo-ia.png" alt="Information architecture: landing pages (home page, blogs, developers, FAQ, guide doc), pages accessible in landing pages (features, resources, pricing, bots and integrations, about us), and sections existing in landing pages (testimonials, demo request, platforms)" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 34px;">Color pallet adjustment</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px;">
+      <div style="min-width:0; padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <div style="font-size:12px; letter-spacing:.14em; color:rgba(245,243,238,.45); margin-bottom:22px;">OLD COLORS</div>
+        <div style="display:flex; gap:14px; margin-bottom:24px;">
+          <div style="width:64px; height:64px; border-radius:14px; background:linear-gradient(150deg,#4EE0B0,#3FC9A0); flex:none;"></div>
+          <div style="width:64px; height:64px; border-radius:14px; background:#62BC8B; flex:none;"></div>
+        </div>
+        <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.72); margin:0 0 16px; text-wrap:pretty;">A fraction of the primary color is used in typography, buttons, and certain texts.</p>
+        <div style="display:grid; gap:10px; font-size:15.5px; line-height:1.6; color:rgba(245,243,238,.72);">
+          <div><strong style="color:#F5F3EE;">Both white and black texts lack sufficient contrast on it.</strong> (2.21 : 1)</div>
+          <div><strong style="color:#F5F3EE;">It is not as catchy as we expect</strong></div>
+        </div>
+        <p style="font-size:15.5px; line-height:1.65; color:rgba(245,243,238,.6); margin:20px 0 0;">Primary color which is used in logo. <strong style="color:#F5F3EE;">Enhancing sharpness would improve the utility.</strong></p>
+      </div>
+
+      <div style="min-width:0; padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(59,224,160,.3);">
+        <div style="font-size:12px; letter-spacing:.14em; color:#3BE0A0; margin-bottom:22px;">NEW COLORS</div>
+        <div style="display:flex; gap:20px; flex-wrap:wrap; margin-bottom:26px;">
+          <div style="min-width:0;">
+            <div style="width:64px; height:64px; border-radius:14px; background:linear-gradient(150deg,#3FD0E8,#3BE0A0); margin-bottom:10px;"></div>
+            <div style="font-size:13px; color:rgba(245,243,238,.55);">Primary gradient</div>
+          </div>
+          <div style="min-width:0;">
+            <div style="width:64px; height:64px; border-radius:14px; background:#3BE39C; margin-bottom:10px;"></div>
+            <div style="font-size:13px; color:rgba(245,243,238,.55);">Primary color</div>
+          </div>
+          <div style="min-width:0;">
+            <div style="width:64px; height:64px; border-radius:14px; background:#EAF9F4; margin-bottom:10px;"></div>
+            <div style="font-size:13px; color:rgba(245,243,238,.55);">Background gradient</div>
+          </div>
+        </div>
+        <div style="font-size:14px; color:rgba(245,243,238,.5); margin-bottom:16px;">Feel the difference</div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:flex-end;">
+          <div style="min-width:0;">
+            <div style="font-size:12.5px; color:rgba(245,243,238,.45); margin-bottom:8px;">2.21 : 1 (low contrast)</div>
+            <div style="background:#62BC8B; color:#FFFFFF; font:700 14px 'Space Grotesk',sans-serif; letter-spacing:.06em; padding:14px 30px; border-radius:999px;">START FREE</div>
+          </div>
+          <div style="min-width:0;">
+            <div style="font-size:12.5px; color:rgba(245,243,238,.72); margin-bottom:8px;">11.18 : 1 (high contrast)</div>
+            <div style="background:#3BE39C; color:#0B0B0D; font:700 14px 'Space Grotesk',sans-serif; letter-spacing:.06em; padding:14px 30px; border-radius:999px;">START FREE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Padding and spacing</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 30px;">Mobile and desktop values, standardised before the UI work started.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;">
+      <sc-for list="{{ spacing }}" as="t" hint-placeholder-count="3">
+        <div style="min-width:0; padding:28px 26px; border-radius:18px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; margin:0 0 20px;">{{ t.title }}</h3>
+          <div style="display:grid; grid-template-columns:1fr auto auto; gap:12px 18px; align-items:center; font-size:14px;">
+            <span></span>
+            <span style="color:rgba(245,243,238,.4); font-size:12px; letter-spacing:.1em; text-align:right;">MOB</span>
+            <span style="color:rgba(245,243,238,.4); font-size:12px; letter-spacing:.1em; text-align:right;">DESK</span>
+            <sc-for list="{{ t.rows }}" as="r" hint-placeholder-count="4">
+              <span style="color:rgba(245,243,238,.72); font-size:15px;">{{ r.label }}</span>
+              <span style="font:600 15px 'Space Grotesk',sans-serif; text-align:right; color:rgba(245,243,238,.6);">{{ r.m }}</span>
+              <span style="font:600 15px 'Space Grotesk',sans-serif; text-align:right; color:#3BE0A0;">{{ r.d }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 34px;">Illustrations</h2>
+    <div style="border-radius:20px; overflow:hidden; background:#FFFFFF; border:1px solid rgba(245,243,238,.12); padding:clamp(20px,3vw,40px);">
+      <img src="./assets/limoo-illustrations.png" alt="Selected illustration kit: target with arrows, thinking figure, documents in hand, caped figure, slingshot, walking figure with phone, and a key handed over" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Shot explanation</h2>
+    <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.6); margin:0 0 36px; max-width:60ch;">The annotated sections below show what each part of the page is doing and why it earned its place.</p>
+    <div style="display:grid; gap:clamp(28px,4vw,52px);">
+      <sc-for list="{{ boards }}" as="b" hint-placeholder-count="3">
+        <div style="min-width:0;">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2vw,24px); font-weight:600; letter-spacing:-.01em; margin:0 0 16px; color:#F5F3EE;">{{ b.title }}</h3>
+          <div style="border-radius:20px; overflow:hidden; background:#FFFFFF; border:1px solid rgba(245,243,238,.12);">
+            <img src="{{ b.src }}" alt="{{ b.alt }}" loading="lazy" style="width:100%; display:block;">
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(56px,7vw,100px) clamp(24px,7vw,120px) clamp(48px,6vw,72px); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.6vw,46px); font-weight:600; letter-spacing:-.025em; margin:0 0 20px;">Thank you!</h2>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.7); margin:0 0 20px; max-width:70ch; text-wrap:pretty;">We're so glad you stopped by. Your like and comments will be appreciated, if you enjoyed my work of course =) I'd love to hear your thoughts! For more in-depth conversations or inquiries, feel free to reach out via email. Your feedback and interaction mean the world to us. Thank you for being part of our community!</p>
+      <p style="font-size:15px; color:rgba(245,243,238,.45); margin:0 0 36px;">Illustration and collaboration credits: Paniz Diba, Alireza Tehrani, Hossein Malakalaie.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="Contact.dc.html" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="background:#ffffff">Get in touch</a>
+        <a href="Case Study 01 Dadsun.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">← Dadsun</a>
+        <a href="Case Study 03 SamChamp.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">Next: SamChamp →</a>
+        <a href="https://www.behance.net/gallery/192045261/Landing-page-redesign-for-a-team-communication-platform" target="_blank" rel="noopener" style="border:1px solid rgba(245,243,238,.28); color:rgba(245,243,238,.7); padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE; color:#F5F3EE">View on Behance</a>
+      </div>
+      <div style="display:flex; gap:26px; margin-top:44px; font-size:14px; flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/in/alibekmaz/" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">LinkedIn</a>
+        <a href="https://www.behance.net/alibekmaz" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">Behance</a>
+        <a href="mailto:AliBekmaz1999@gmail.com" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">AliBekmaz1999@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { scrolled: false, read: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const doc = document.documentElement;
+      const max = Math.max(1, doc.scrollHeight - innerHeight);
+      const y = window.scrollY || doc.scrollTop || 0;
+      const read = Math.min(1, Math.max(0, y / max));
+      const scrolled = y > 260;
+      if (read !== this.state.read || scrolled !== this.state.scrolled) this.setState({ read, scrolled });
+    };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    removeEventListener('scroll', this.onScroll);
+    removeEventListener('resize', this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      barShift: this.state.scrolled ? 'translateY(0)' : 'translateY(-101%)',
+      barOpacity: this.state.scrolled ? 1 : 0,
+      readPercent: Math.round(this.state.read * 100) + '%',
+      readWidth: (this.state.read * 100).toFixed(2) + '%',
+      chapters: ["Process explanation","User research insights","Design challenges","Information architecture","Color pallet adjustment","Padding and spacing","Illustrations","Shot explanation","Prototyping"],
+      goals: [
+        { num:"1.", text:"Increase the conversion rate of visitors to registered users." },
+        { num:"2.", text:"Boost the number of demo requests." },
+        { num:"3.", text:"Implement an aesthetic and persuasive design to engage more users." },
+        { num:"4.", text:"Improve the conversion rate by clearly introducing our platform within the first 2 minutes." },
+        { num:"5.", text:"Revise the brand image and tone of voice." },
+        { num:"6.", text:"Ensure the design is feasible and easy to develop." }
+      ],
+      process: [
+        { num:"1", items:["Conduct a brief meeting.","Perform competitive research.","Execute user testing.","Undertake a UX evaluation."] },
+        { num:"2", items:["Designing information architecture","Creating low-fidelity wireframes"] },
+        { num:"3", items:["High-fidelity wireframes","Crafting a UI kit and brand identity"] },
+        { num:"4", items:["Designing the UI","Creating documentation and standardizing handoff procedures"] },
+        { num:"5", items:["Conducting usability tests and gathering user feedback","Stakeholder feedback sessions","Resolving issues","Handing over the project"] }
+      ],
+      insights: [
+        { num:"1.", text:"Our paid users include companies, corporations, and organizations.", hasList:false, list:[] },
+        { num:"2.", text:"After analyzing Limoo's customer data, we identified that Limoo's target audience falls into six industries:", hasList:true,
+          list:["Software teams & companies","Holdings & large corporations","Startup studios and accelerators","Content creators & news agencies","Electronic commerce","Educational centers"] },
+        { num:"3.", text:"The lack of proper information architecture has led to users being unable to find what they were looking for, resulting in a high bounce rate.", hasList:false, list:[] },
+        { num:"4.", text:"Given the high proportion of desktop users (over 70%), adopting a desktop-first design approach is advisable.", hasList:false, list:[] },
+        { num:"5.", text:"The concept of an online team communication platform is not widely accepted in the Iranian market, especially among educational centers.", hasList:false, list:[] },
+        { num:"6.", text:"We need to reconsider the demo request flow due to the low interaction rate on the current website.", hasList:false, list:[] },
+        { num:"7.", text:"Our analysis indicates that over 80% of purchases occur after a demo session.", hasList:false, list:[] },
+        { num:"8.", text:"Current users have stated, \"Limoo is the best replacement for our team instead of personal messengers, because it offers a single solution for all the features we need.\"", hasList:false, list:[] }
+      ],
+      challenges: [
+        "Achieve a cohesive visual language across the dashboard and application.",
+        "Craft a design guideline specifying the use of color, typography, and brand identity.",
+        "Choose an illustration kit that aligns closely with our visual language and fills our visual gaps.",
+        "Design sections that are usable and clear, effectively conveying our message.",
+        "The deadline was tight; we had only two weeks to complete the entire process.",
+        "Explain Limoo's usage for different personas across 6 mentioned industries."
+      ],
+      spacing: [
+        { title:"Cards paddings", rows:[ {label:"Small card", m:"16", d:"24"}, {label:"Medium card", m:"24", d:"40"}, {label:"Large card", m:"24", d:"64"} ] },
+        { title:"Border radios", rows:[ {label:"Buttons", m:"8", d:"8"}, {label:"Promote cards", m:"48", d:"72"}, {label:"Cards", m:"16", d:"24"}, {label:"Small cards", m:"16", d:"16"} ] },
+        { title:"Spacing", rows:[ {label:"Between sections", m:"40", d:"80"}, {label:"Between cards", m:"16", d:"24"}, {label:"Menu", m:"40", d:"80"} ] }
+      ],
+      boards: [
+        { title:"An short explanation on hero section", src:"./assets/limoo-hero.png", alt:"Annotated hero section: headline answering how Limoo helps different users, primary and secondary CTAs, and a logo row of teams relying on Limoo" },
+        { title:"How did we introduced Limoo's features in different industries", src:"./assets/limoo-industries.png", alt:"Annotated industries section with tabs per industry, four feature blocks, an app preview, and a row of customer story cards" },
+        { title:"Other shots", src:"./assets/limoo-shots.png", alt:"Collage of further screens: pricing tiers, features grid, integrations, blog, help and guide, testimonials and the mobile home page" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

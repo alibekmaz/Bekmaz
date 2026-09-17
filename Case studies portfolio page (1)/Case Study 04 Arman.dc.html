@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#0B0B0D; }
+    * { box-sizing:border-box; }
+    ::selection { background:#FF5A36; color:#0B0B0D; }
+    a { color:#FF5A36; }
+    a:hover { color:#ff8163; }
+  </style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh;">
+
+  <header style="position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px clamp(20px,5vw,44px); background:linear-gradient(#0B0B0Dee,#0B0B0Dcc); backdrop-filter:blur(6px); border-bottom:1px solid rgba(245,243,238,.07);">
+    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none;"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
+    <nav style="display:flex; gap:clamp(16px,2.4vw,32px); font-size:15px; flex-wrap:wrap;">
+      <a href="Home.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Home</a>
+      <a href="Case Studies 3D.dc.html" style="color:#F5F3EE; text-decoration:none;">Case Studies</a>
+      <a href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">About Me</a>
+      <a href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Contact</a>
+    </nav>
+    <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;" style-hover="background:#ff7654">Download CV</a>
+  </header>
+
+  <div style="position:fixed; top:72px; left:0; right:0; z-index:19; transform:{{ barShift }}; opacity:{{ barOpacity }}; transition:transform .32s cubic-bezier(.2,.7,.2,1), opacity .24s ease; background:rgba(11,11,13,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,.09);">
+    <div style="display:flex; align-items:center; gap:clamp(12px,2vw,24px); max-width:1180px; margin:0 auto; padding:12px clamp(24px,7vw,120px);">
+      <a href="Case Studies 3D.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 14px 7px 11px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)"><span style="font-size:15px; line-height:1;">←</span>All case studies</a>
+      <div style="min-width:0; flex:1; display:flex; align-items:baseline; gap:10px; overflow:hidden;">
+        <span style="font:700 13px 'Space Grotesk',sans-serif; color:#2BB3A3; flex:none;">04</span>
+        <span style="font:600 15px 'Space Grotesk',sans-serif; color:#F5F3EE; flex:none;">Arman</span>
+        <span style="font-size:13.5px; color:rgba(245,243,238,.42); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Brokerage registration flow</span>
+      </div>
+      <span style="flex:none; font:600 13px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.5); font-variant-numeric:tabular-nums;">{{ readPercent }}</span>
+      <a href="Case Study 01 Dadsun.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 11px 7px 14px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)">Next: Dadsun<span style="font-size:15px; line-height:1;">→</span></a>
+    </div>
+    <div style="height:2px; background:rgba(245,243,238,.08);">
+      <div style="height:100%; width:{{ readWidth }}; background:#2BB3A3; transition:width .1s linear;"></div>
+    </div>
+  </div>
+
+  <section style="padding:clamp(40px,6vw,88px) clamp(24px,7vw,120px) clamp(32px,4vw,56px); max-width:1180px; margin:0 auto;">
+    <a href="Case Studies 3D.dc.html" style="display:inline-block; font-size:13.5px; letter-spacing:.06em; text-decoration:none; color:rgba(245,243,238,.5); margin-bottom:28px;" style-hover="color:#FF5A36">← ALL CASE STUDIES</a>
+    <div style="font-size:12px; letter-spacing:.14em; color:#2BB3A3; margin-bottom:16px;">04 · ARMAN · BROKERAGE REGISTRATION FLOW</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(34px,5vw,64px); font-weight:600; line-height:1.06; letter-spacing:-.03em; margin:0 0 20px; max-width:22ch; text-wrap:pretty;">Arman Brokerage registration flow</h1>
+    <p style="font-size:19px; line-height:1.6; color:rgba(245,243,238,.6); margin:0 0 40px;">Just when you need me, <span style="color:#2BB3A3;">I'm there …</span></p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(20px,3vw,40px); padding:28px clamp(24px,3vw,36px); border-radius:20px; background:rgba(18,18,22,.7); border:1px solid rgba(245,243,238,.1);">
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">ROLE</div>
+        <div style="font-size:15px; line-height:1.5;">Product designer</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TIMELINE</div>
+        <div style="font-size:15px; line-height:1.5;">Six weeks</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TOOLS</div>
+        <div style="font-size:15px; line-height:1.5;">Figma, Miro, FigJam</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">PUBLISHED</div>
+        <div style="font-size:15px; line-height:1.5;">January 2024</div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;">
+      <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="7">
+        <span style="font-size:13.5px; padding:9px 16px; border-radius:999px; border:1px solid rgba(245,243,238,.16); color:rgba(245,243,238,.68);">{{ c }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 24px;">Project description</h2>
+    <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0; max-width:70ch; text-wrap:pretty;">Arman is a brokerage that aims to convert the traditional in-person registration process into an online format. This process consists of two distinct phases. The initial phase involves obtaining a unique code from the Comprehensive Customer Information System, commonly known as the Sajam code. Possessing the Sajam code is a prerequisite for engaging in stock market operations in Iran. The second phase entails the registration process for each brokerage.</p>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 28px;">Contextual situation</h2>
+    <div style="padding:clamp(24px,3vw,36px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1); margin-bottom:16px;">
+      <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.75); margin:0 0 18px;">There are two types of people who may join Arman:</p>
+      <div style="display:grid; gap:14px;">
+        <div style="display:flex; gap:14px; font-size:16px; line-height:1.65; color:rgba(245,243,238,.72);"><span style="color:#2BB3A3; font-weight:600;">a.</span><span>Users who are already experienced traders. These users possess a 'Sajam badge' (an Iranian trader certificate).</span></div>
+        <div style="display:flex; gap:14px; font-size:16px; line-height:1.65; color:rgba(245,243,238,.72);"><span style="color:#2BB3A3; font-weight:600;">b.</span><span>Users who have recently developed an interest in trading. These users are not yet familiar with the requirements, such as the 'Sajam badge', and the overall process.</span></div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;">
+      <sc-for list="{{ context }}" as="c" hint-placeholder-count="5">
+        <div style="min-width:0; padding:24px; border-radius:16px; background:rgba(18,18,22,.55); border:1px solid rgba(245,243,238,.09); font-size:15.5px; line-height:1.65; color:rgba(245,243,238,.72); text-wrap:pretty;">{{ c }}</div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); background:linear-gradient(140deg,rgba(43,179,163,.11),rgba(43,179,163,.02)); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 30px;">Goals</h2>
+      <div style="display:grid; gap:16px;">
+        <sc-for list="{{ goals }}" as="g" hint-placeholder-count="5">
+          <div style="display:flex; gap:18px; align-items:baseline;">
+            <span style="font:600 16px 'Space Grotesk',sans-serif; color:#2BB3A3; flex:none; width:22px;">{{ g.num }}</span>
+            <p style="font-size:16.5px; line-height:1.65; color:rgba(245,243,238,.8); margin:0; text-wrap:pretty;">{{ g.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 28px;">Design issues</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-bottom:clamp(40px,5vw,64px);">
+      <sc-for list="{{ issues }}" as="i" hint-placeholder-count="3">
+        <div style="min-width:0; padding:26px; border-radius:16px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1); font-size:16px; line-height:1.65; color:rgba(245,243,238,.75); text-wrap:pretty;">{{ i }}</div>
+      </sc-for>
+    </div>
+
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 28px;">Timeline</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px;">
+      <sc-for list="{{ timeline }}" as="w" hint-placeholder-count="6">
+        <div style="min-width:0; padding:24px 22px; border-radius:16px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <div style="font:700 24px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.2); margin-bottom:6px;">{{ w.num }}</div>
+          <div style="font-size:12px; letter-spacing:.11em; color:#2BB3A3; margin-bottom:16px;">{{ w.week }}</div>
+          <div style="display:grid; gap:8px;">
+            <sc-for list="{{ w.items }}" as="i" hint-placeholder-count="4">
+              <div style="font-size:14.5px; line-height:1.5; color:rgba(245,243,238,.72);">{{ i }}</div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 30px;">Research</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px;">
+      <sc-for list="{{ research }}" as="r" hint-placeholder-count="3">
+        <div style="min-width:0; padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; letter-spacing:-.01em; margin:0 0 16px;">{{ r.title }}</h3>
+          <p style="font-size:15.5px; line-height:1.7; color:rgba(245,243,238,.7); margin:0; text-wrap:pretty;">{{ r.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 30px;">Key insights from user research</h2>
+    <div style="display:grid; gap:18px;">
+      <sc-for list="{{ insights }}" as="i" hint-placeholder-count="9">
+        <div style="display:flex; gap:18px;">
+          <span style="font:600 15px 'Space Grotesk',sans-serif; color:#2BB3A3; flex:none; width:22px;">{{ i.num }}</span>
+          <p style="font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.78); margin:0; max-width:78ch; text-wrap:pretty;">{{ i.text }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Analyzing the old flow</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px;">Registering in an Iranian brokerage, before the redesign.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-bottom:clamp(28px,4vw,44px);">
+      <sc-for list="{{ oldFlow }}" as="o" hint-placeholder-count="2">
+        <div style="min-width:0; padding:clamp(24px,3vw,32px); border-radius:18px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; margin:0 0 18px;">{{ o.title }}</h3>
+          <div style="display:grid; gap:11px;">
+            <sc-for list="{{ o.steps }}" as="s" hint-placeholder-count="5">
+              <div style="display:flex; gap:11px; font-size:15px; line-height:1.55; color:rgba(245,243,238,.72);"><span style="color:rgba(43,179,163,.8);">▪</span><span>{{ s }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2vw,24px); font-weight:600; margin:0 0 16px;">Old flow journey map</h3>
+    <div style="border-radius:20px; overflow:hidden; background:#FBF7F2; border:1px solid rgba(245,243,238,.12);">
+      <img src="./assets/arman-journey.png" alt="Journey map across register in Sajam, register in a brokerage and take the exam, with rows for user actions, pain points, touch points, emotions and possible solutions" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 24px;">New flow map design process</h2>
+    <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.72); margin:0 0 34px; max-width:74ch; text-wrap:pretty;">Now that we've gained a profound understanding of both users and the various perspectives on flows, it's time to embark on designing our flow map. The primary objective is to guide a potential user seamlessly through the journey to becoming an actual customer. This flow map will serve as a handbook for both designers and developers, providing insights into different stages and states of the process. Given the intricate nature of the flow, we opted to delineate a well-defined framework, and what better starting point than the traditional registration flow?</p>
+
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:22px 24px; border-radius:16px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1); margin-bottom:34px; font:600 15px 'Space Grotesk',sans-serif;">
+      <span>Start</span><span style="color:rgba(245,243,238,.32);">→</span>
+      <span>Sajam registration</span><span style="color:rgba(245,243,238,.32);">→</span>
+      <span>Upload document</span><span style="color:rgba(245,243,238,.32);">→</span>
+      <span>Sign contract &amp; exam</span>
+    </div>
+
+    <p style="font-size:16px; color:rgba(245,243,238,.7); margin:0 0 22px;">We encounter two primary challenges in our current flow that need resolution before progressing:</p>
+    <div style="display:grid; gap:18px; margin-bottom:34px;">
+      <sc-for list="{{ challenges }}" as="c" hint-placeholder-count="2">
+        <div style="padding:clamp(24px,3vw,32px); border-radius:18px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; margin:0 0 12px;">{{ c.title }}</h3>
+          <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.72); margin:0 0 18px; text-wrap:pretty;">{{ c.body }}</p>
+          <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.85); margin:0; padding-left:18px; border-left:2px solid #2BB3A3; text-wrap:pretty;"><strong style="color:#2BB3A3;">Solution:</strong> {{ c.solution }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <p style="font-size:16px; color:rgba(245,243,238,.7); margin:0 0 20px;">As a result, the following was achieved:</p>
+    <div style="padding:26px 24px; border-radius:16px; background:rgba(43,179,163,.08); border:1px solid rgba(43,179,163,.3);">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; font:600 15px 'Space Grotesk',sans-serif; margin-bottom:18px;">
+        <span>Pre registration/login</span><span style="color:rgba(245,243,238,.32);">→</span>
+        <span>Sajam registration</span><span style="color:rgba(245,243,238,.32);">→</span>
+        <span>Upload document</span><span style="color:rgba(245,243,238,.32);">→</span>
+        <span>Sign contract &amp; exam</span>
+      </div>
+      <div style="font-size:15px; color:rgba(245,243,238,.7);">Every level also routes into <strong style="color:#F5F3EE;">Inform user the problem &amp; solution / state</strong>, so users entering mid-flow land at the right step.</div>
+    </div>
+    <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.68); margin:28px 0 0; max-width:74ch; text-wrap:pretty;">Having established the framework for the flow map, the next step is to develop and integrate the details based on the Sajam API documentation, the Security &amp; Exchange Organization documentation, and our understanding of different levels.</p>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">The complete flow map</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px;">Three levels, every Sajam account state, and the route out of each one.</p>
+    <div style="border-radius:20px; overflow:hidden; background:#FBF7F2; border:1px solid rgba(245,243,238,.12);">
+      <img src="./assets/arman-flowmap.png" alt="Full flow map covering level one Sajam registration with complete, waiting, empty, suspended, semi and dead account states, level two document upload with rejection and approval paths, and level three contract signing and the exchange exam" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Design decisions</h2>
+    <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.6); margin:0 0 36px; max-width:60ch;">Wireframes, the status system, the support pattern, and the contract page.</p>
+    <div style="display:grid; gap:clamp(28px,4vw,52px);">
+      <sc-for list="{{ boards }}" as="b" hint-placeholder-count="4">
+        <div style="min-width:0;">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2vw,24px); font-weight:600; letter-spacing:-.01em; margin:0 0 16px; color:#F5F3EE;">{{ b.title }}</h3>
+          <div style="border-radius:20px; overflow:hidden; background:{{ b.bg }}; border:1px solid rgba(245,243,238,.12);">
+            <img src="{{ b.src }}" alt="{{ b.alt }}" loading="lazy" style="width:100%; display:block;">
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(56px,7vw,100px) clamp(24px,7vw,120px) clamp(48px,6vw,72px); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.6vw,46px); font-weight:600; letter-spacing:-.025em; margin:0 0 20px;">Thank you!</h2>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.7); margin:0 0 36px; max-width:70ch; text-wrap:pretty;">While I've only provided a brief overview of the project here, it feels appropriate to conclude at this point. It's worth noting that this project was originally created in Persian. For the purposes of showcase for this case study, excerpts were translated to english, which is why I haven't included more shots. Feel free to contact me =)</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="Contact.dc.html" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="background:#ffffff">Get in touch</a>
+        <a href="Case Study 03 SamChamp.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">← SamChamp</a>
+        <a href="Case Studies 3D.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">All case studies</a>
+        <a href="https://www.behance.net/gallery/189250359/Arman-Brokerage-Registration-Flow" target="_blank" rel="noopener" style="border:1px solid rgba(245,243,238,.28); color:rgba(245,243,238,.7); padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE; color:#F5F3EE">View on Behance</a>
+      </div>
+      <div style="display:flex; gap:26px; margin-top:44px; font-size:14px; flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/in/alibekmaz/" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">LinkedIn</a>
+        <a href="https://www.behance.net/alibekmaz" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">Behance</a>
+        <a href="mailto:AliBekmaz1999@gmail.com" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">AliBekmaz1999@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { scrolled: false, read: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const doc = document.documentElement;
+      const max = Math.max(1, doc.scrollHeight - innerHeight);
+      const y = window.scrollY || doc.scrollTop || 0;
+      const read = Math.min(1, Math.max(0, y / max));
+      const scrolled = y > 260;
+      if (read !== this.state.read || scrolled !== this.state.scrolled) this.setState({ read, scrolled });
+    };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    removeEventListener('scroll', this.onScroll);
+    removeEventListener('resize', this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      barShift: this.state.scrolled ? 'translateY(0)' : 'translateY(-101%)',
+      barOpacity: this.state.scrolled ? 1 : 0,
+      readPercent: Math.round(this.state.read * 100) + '%',
+      readWidth: (this.state.read * 100).toFixed(2) + '%',
+      chapters: ["Project description","Contextual situation","Time line","User research insights","User journey map","Complex flow map design process","Issue resolution"],
+      context: [
+        "Faced with economic challenges, Arman found it imperative to expand their business by onboarding new users.",
+        "The onset of the COVID-19 pandemic significantly hindered user registration conversion due to heightened physical requirements.",
+        "The rapid growth of the stock market in Iran prompted Arman to act swiftly, aiming to stay competitive in the industry.",
+        "Governmental brokerages had the advantage of advertising in citizen offices, where physical presence was mandatory for Sajam registration.",
+        "We were experiencing customer loss in the exhausting and lengthy physical registration processes."
+      ],
+      goals: [
+        { num:"1.", text:"Convert potential users into active customers." },
+        { num:"2.", text:"Enable users to seamlessly register and address any issues encountered in the process." },
+        { num:"3.", text:"Facilitate users in joining the stock market through Arman's registration flow." },
+        { num:"4.", text:"Encourage users to become members of the customer club." },
+        { num:"5.", text:"Achieve a 30% conversion rate from individuals initiating the flow to signing the contract." }
+      ],
+      issues: [
+        "Stringent regulations from supervisory institutions in both Sajam and the Securities & Exchange Organization.",
+        "The complexity of a multi-dimensional flow poses a design challenge.",
+        "Uniqueness in the market, being the first brokerage to integrate Sajam and brokerage registration, resulting in the absence of direct competitors in this particular aspect."
+      ],
+      timeline: [
+        { num:"1", week:"WEEK 1", items:["Data gathering","Competitive research","UX research","Interview","User journey map"] },
+        { num:"2", week:"WEEK 2", items:["Design flows","Data architecture"] },
+        { num:"3", week:"WEEK 3", items:["Wireframing","Expand design system","Create theme of final UI"] },
+        { num:"4", week:"WEEK 4", items:["UI design of 1st level","Evaluate first level","Issue resolution"] },
+        { num:"5", week:"WEEK 5", items:["UI design of 2nd level","Evaluate 2nd level","Issue resolution","Prototyping"] },
+        { num:"6", week:"WEEK 6", items:["User test","Issue resolution","Present final shots","Get feedback","Implement feedback"] }
+      ],
+      research: [
+        { title:"Brief session", body:"We initiated the UX research process with a brief meeting that included our designers and stakeholders. During this session, we strategically posed questions to guide the discussion and maintain the stakeholders' focus on our designated topic. This helped us gain valuable insights into what stakeholders expect. On the flip side, stakeholders shared their views on how they believe customers behave, providing a useful starting point for our research. Towards the end, we also touched on other brokerages in the field, getting some updates on their activities." },
+        { title:"Competitive analysis", body:"Earlier, we discussed the two phases of the registration flow. For the Sajam registration, our only options were to analyze the physical process or explore the official Sajam website. In this context, we personally navigated through the physical flow to gain a comprehensive understanding. Additionally, we conducted a thorough analysis of the sole online solution available. Moving on to the second phase, which involved brokerage registration, we analyzed seven of the top brokerages currently in the market." },
+        { title:"Interview", body:"It was now time for interviews, a crucial step in understanding people's experiences, thoughts, and actions. While maintaining the focus on the registration process, we encouraged participants to share their challenges both before and after this flow. This allowed us to gather insights into their pain points, which we could later use as clues for addressing them. We selected 6 interviewees from citizen offices, 3 loyal customers, and 3 from our Instagram following to ensure diverse perspectives from various types of potential customers. The interviews were guided by 10 key questions to keep the discussion centered on the intended topic." }
+      ],
+      insights: [
+        { num:"1.", text:"Waiting in long lines is a significant pain point for users who have undergone the physical registration process." },
+        { num:"2.", text:"Obtaining a Sajam badge for trading in Iran is mandatory, and the process can be confusing and frustrating." },
+        { num:"3.", text:"Individuals accustomed to trading in the Iranian stock market are aware that the processes are slow and time-consuming. However, newcomers often experience frustration during the flow." },
+        { num:"4.", text:"The forms and questions are lengthy but generally straightforward. Adding brief explanations for certain sections might be helpful." },
+        { num:"5.", text:"During physical registration, having a counter officer available to answer questions is beneficial. However, finding a free officer can be challenging, especially in the Sajam registration process." },
+        { num:"6.", text:"Customers generally prefer visiting the brokerage branch over citizen offices, often due to less favorable experiences at the citizen offices." },
+        { num:"7.", text:"Most people in this field are accustomed to calling customer support or personally visiting the branch for assistance with their issues." },
+        { num:"8.", text:"Usually, you will receive your Sajam badge a few minutes after completing your registration. Therefore, we could consider guiding people to the next step while waiting for Sajam to confirm the user. This approach could help reduce one of the waiting gaps." },
+        { num:"9.", text:"There are two distinct behaviors observed among our users. The first group comprises individuals who have typically entered trading independently and engage in full-time trading. These professionals meticulously read all contracts and related texts. The second group, mainly invited by marketers, consists of casual users who view trading as a hobby. They tend to rely on marketers to handle every step, putting less effort into the process. The first type is considered more valuable for Arman." }
+      ],
+      oldFlow: [
+        { title:"Going to Pish-Khan offices", steps:[
+          "Going to a specific citizen office called Pish-Khan.",
+          "Wait in line to be able to reach the counter officer.",
+          "Proof your identity with giving your IDs.",
+          "Filling and signing 7 pages.",
+          "Wait in line again if you have any question about the form.",
+          "Let them take picture of you to put on your profile.",
+          "Wait up to 48 hours to get a unique exchange trader code called 'Sajam'."
+        ] },
+        { title:"Going to a brokerage", steps:[
+          "Showing your IDs and your Sajam code.",
+          "Read and sign contracts.",
+          "Watch a trading tutorial if available.",
+          "Take a test to proof you are qualified to operate in stock market.",
+          "Wait up to 48 hours to get the approved."
+        ] }
+      ],
+      challenges: [
+        { title:"Lengthy flow and waiting gaps",
+          body:"Users may need to exit the flow temporarily and return later, driven primarily by mandatory waiting periods mandated by legal regulations. Furthermore, the prolonged duration of the flow heightens the potential for user distraction, a factor we must acknowledge even if it's not preferable.",
+          solution:"Bypass the linear flow concept! Instead, let's direct users to the appropriate level at each entry point. To facilitate this, we require a simple registration process to efficiently capture user data. It can simply be an email/phone number and a password or implementing email/phone verification." },
+        { title:"Complexity of different possible states",
+          body:"Users may encounter waiting periods, may need to contact the Sajam organization to update their status, and numerous other states that could impede their progression through various steps of the flow.",
+          solution:"We should add an additional section into our framework specifically designed to inform users about their current state and provide corresponding solutions for each situation." }
+      ],
+      boards: [
+        { title:"Wireframes and expanding the design system", src:"./assets/arman-wireframes.png", bg:"#1C1C1E",
+          alt:"Wireframes for personal information, document upload, Sajam profile match, personal info review and the ten question assessment exam, alongside new design system components" },
+        { title:"Visibility of status as challenge", src:"./assets/arman-progress.png", bg:"#1C1C1E",
+          alt:"Progress bar at 13% and 87% for level one, and a registration progress dashboard card showing completed Sajam registration, document upload at 60%, sign contract pending, and the reward" },
+        { title:"\"I got problem!\" user's said", src:"./assets/arman-support.png", bg:"#1C1C1E",
+          alt:"Customer support solution using the same side menu as the club panel, shown on the exam page" },
+        { title:"Two points on the sign contract page", src:"./assets/arman-contracts.png", bg:"#1C1C1E",
+          alt:"Sign and confirm contract page with four contracts, short explanations under each, and the online trading option pre-checked" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#0B0B0D; }
+    * { box-sizing:border-box; }
+    ::selection { background:#FF5A36; color:#0B0B0D; }
+    a { color:#FF5A36; }
+    a:hover { color:#ff8163; }
+  </style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh;">
+
+  <header style="position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px clamp(20px,5vw,44px); background:linear-gradient(#0B0B0Dee,#0B0B0Dcc); backdrop-filter:blur(6px); border-bottom:1px solid rgba(245,243,238,.07);">
+    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none;"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
+    <nav style="display:flex; gap:clamp(16px,2.4vw,32px); font-size:15px; flex-wrap:wrap;">
+      <a href="Home.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Home</a>
+      <a href="Case Studies 3D.dc.html" style="color:#F5F3EE; text-decoration:none;">Case Studies</a>
+      <a href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">About Me</a>
+      <a href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Contact</a>
+    </nav>
+    <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;" style-hover="background:#ff7654">Download CV</a>
+  </header>
+
+  <div style="position:fixed; top:72px; left:0; right:0; z-index:19; transform:{{ barShift }}; opacity:{{ barOpacity }}; transition:transform .32s cubic-bezier(.2,.7,.2,1), opacity .24s ease; background:rgba(11,11,13,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,.09);">
+    <div style="display:flex; align-items:center; gap:clamp(12px,2vw,24px); max-width:1180px; margin:0 auto; padding:12px clamp(24px,7vw,120px);">
+      <a href="Case Studies 3D.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 14px 7px 11px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)"><span style="font-size:15px; line-height:1;">←</span>All case studies</a>
+      <div style="min-width:0; flex:1; display:flex; align-items:baseline; gap:10px; overflow:hidden;">
+        <span style="font:700 13px 'Space Grotesk',sans-serif; color:#FF5A36; flex:none;">01</span>
+        <span style="font:600 15px 'Space Grotesk',sans-serif; color:#F5F3EE; flex:none;">Dadsun</span>
+        <span style="font-size:13.5px; color:rgba(245,243,238,.42); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Enhancing landing page acquisition</span>
+      </div>
+      <span style="flex:none; font:600 13px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.5); font-variant-numeric:tabular-nums;">{{ readPercent }}</span>
+      <a href="Case Study 02 Limoo.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 11px 7px 14px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)">Next: Limoo<span style="font-size:15px; line-height:1;">→</span></a>
+    </div>
+    <div style="height:2px; background:rgba(245,243,238,.08);">
+      <div style="height:100%; width:{{ readWidth }}; background:#FF5A36; transition:width .1s linear;"></div>
+    </div>
+  </div>
+
+  <section style="padding:clamp(40px,6vw,88px) clamp(24px,7vw,120px) clamp(32px,4vw,56px); max-width:1180px; margin:0 auto;">
+    <a href="Case Studies 3D.dc.html" style="display:inline-block; font-size:13.5px; letter-spacing:.06em; text-decoration:none; color:rgba(245,243,238,.5); margin-bottom:28px;" style-hover="color:#FF5A36">← ALL CASE STUDIES</a>
+    <div style="font-size:12px; letter-spacing:.14em; color:#FF5A36; margin-bottom:16px;">01 · DADSUN · A LAWYER SUGGESTION PLATFORM</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(34px,5vw,64px); font-weight:600; line-height:1.06; letter-spacing:-.03em; margin:0 0 24px; max-width:22ch; text-wrap:pretty;">Enhancing landing page acquisition by improving the user experience</h1>
+    <p style="font-size:17px; line-height:1.7; color:rgba(245,243,238,.7); margin:0 0 40px; max-width:60ch; text-wrap:pretty;">A redesign of Dadsun's landing pages and request flow, built on four years of behavioural data from the live product.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(20px,3vw,40px); padding:28px clamp(24px,3vw,36px); border-radius:20px; background:rgba(18,18,22,.7); border:1px solid rgba(245,243,238,.1);">
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">ROLE</div>
+        <div style="font-size:15px; line-height:1.5;">Product designer</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TIMELINE</div>
+        <div style="font-size:15px; line-height:1.5;">One month</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TOOLS</div>
+        <div style="font-size:15px; line-height:1.5;">Figma, Google Analytics, Google Tag Manager, Metabase</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">PUBLISHED</div>
+        <div style="font-size:15px; line-height:1.5;">October 2024</div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;">
+      <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="9">
+        <span style="font-size:13.5px; padding:9px 16px; border-radius:999px; border:1px solid rgba(245,243,238,.16); color:rgba(245,243,238,.68);">{{ c }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 24px;">Short back story</h2>
+    <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.72); margin:0 0 16px; max-width:70ch; text-wrap:pretty;">In the last sprint meeting, we presented a 20% improvement in time on page and a 7% increase in CTA click rate after enhancing readability by simply changing the font size, font weight, and line spacing on our keyword pages. Then we received the unfortunate news of the IT section shutting down. Malek and I (designers) suggested a redesign of the landing pages and flows to apply everything we've gained and learned from Dadsun's user behavior. A proper farewell.</p>
+    <p style="font-size:15px; letter-spacing:.06em; color:rgba(245,243,238,.45); margin:32px 0 18px;">SOME STATS</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="6">
+        <div style="min-width:0; padding:26px 22px; border-radius:16px; background:rgba(18,18,22,.6); border:1px dashed rgba(255,90,54,.4);">
+          <div style="font:700 clamp(26px,3vw,36px)/1 'Space Grotesk',sans-serif; color:#F5F3EE; margin-bottom:10px;">{{ s.value }}</div>
+          <div style="font-size:14.5px; line-height:1.5; color:rgba(245,243,238,.62);">{{ s.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); background:linear-gradient(135deg,#2E1138,#3F1240); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <p style="font-size:16px; color:rgba(245,243,238,.7); margin:0 0 36px;">A redesign on landing pages to:</p>
+      <div style="display:grid; gap:34px;">
+        <sc-for list="{{ goals }}" as="g" hint-placeholder-count="3">
+          <div style="display:flex; gap:20px; align-items:baseline; min-width:0;">
+            <span style="font:700 clamp(22px,2.4vw,30px) 'Space Grotesk',sans-serif; color:#FF5A36; flex:none;">{{ g.num }}</span>
+            <div style="min-width:0;">
+              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(21px,2.6vw,32px); font-weight:600; letter-spacing:-.02em; margin:0 0 10px; color:#F5F3EE;">{{ g.title }}</h3>
+              <p style="font-size:16px; line-height:1.65; color:rgba(245,243,238,.75); margin:0; max-width:64ch; text-wrap:pretty;">{{ g.body }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:16px; color:rgba(245,243,238,.6); margin:40px 0 0;">In one month.</p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 10px;">Let's start from flow</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px;">The old flow: registration first, then four service branches, each ending in a long form.</p>
+    <div style="border-radius:20px; overflow:hidden; background:#F7F7FB; border:1px solid rgba(245,243,238,.12);">
+      <img src="./assets/dadsun-flow-old.png" alt="The old Dadsun flow: registration and login, choose type of service, branching into advocacy, consultant, contracts and judicial document forms" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 32px;">So logical! Let's add some <span style="color:#FF5A36;">human touch</span> to it</h2>
+    <div style="display:grid; gap:20px;">
+
+      <div style="padding:clamp(24px,3vw,38px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(19px,2.1vw,26px); font-weight:600; letter-spacing:-.02em; margin:0 0 16px;"><span style="color:#FF5A36;">·</span> Are all this data that we get necessary?</h3>
+        <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.72); margin:0 0 22px; max-width:74ch; text-wrap:pretty;">We know that the <strong style="color:#F5F3EE;">easier the flow</strong>, the <strong style="color:#F5F3EE;">more likely people are to complete it</strong>. Our customer support team was already contacting users who submitted requests to boost the process, and Dadsun had paused the development of its specialized AI for automatic lawyer suggestions. We also found that users are more willing to share their data when interacting with customer support. All of these factors, combined with our <strong style="color:#F5F3EE;">goal to increase the request submission rate</strong>, led us to streamline the process by cutting unnecessary steps and focusing on just <strong style="color:#F5F3EE;">three crucial parameters</strong>:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px;">
+          <span style="font:600 15.5px 'Space Grotesk',sans-serif; padding:10px 18px; border-radius:12px; background:rgba(255,90,54,.12); color:#F5F3EE;">City</span>
+          <span style="font:600 15.5px 'Space Grotesk',sans-serif; padding:10px 18px; border-radius:12px; background:rgba(255,90,54,.12); color:#F5F3EE;">Category</span>
+          <span style="font:600 15.5px 'Space Grotesk',sans-serif; padding:10px 18px; border-radius:12px; background:rgba(255,90,54,.12); color:#F5F3EE;">Type of service</span>
+        </div>
+      </div>
+
+      <div style="padding:clamp(24px,3vw,38px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(19px,2.1vw,26px); font-weight:600; letter-spacing:-.02em; margin:0 0 16px;"><span style="color:#FF5A36;">·</span> Order matters!</h3>
+        <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.72); margin:0 0 22px; max-width:74ch; text-wrap:pretty;">We decided to <strong style="color:#F5F3EE;">start with the easiest step</strong> for the user: selecting their city. It's something everyone knows and <strong style="color:#F5F3EE;">isn't sensitive information</strong>. After completing this simple first step, users are more engaged, <strong style="color:#F5F3EE;">leading to a higher likelihood of conversion.</strong></p>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px; font:600 15.5px 'Space Grotesk',sans-serif;">
+          <span>City</span><span style="color:rgba(245,243,238,.34);">→</span>
+          <span>Category</span><span style="color:rgba(245,243,238,.34);">→</span>
+          <span>Type of service</span><span style="color:rgba(245,243,238,.34);">→</span>
+          <span>Registration/Login</span>
+        </div>
+      </div>
+
+      <div style="padding:clamp(24px,3vw,38px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(19px,2.1vw,26px); font-weight:600; letter-spacing:-.02em; margin:0 0 16px;"><span style="color:#FF5A36;">·</span> 1200 categories to choose in a search input? Let's refine it!</h3>
+        <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.72); margin:0 0 26px; max-width:74ch; text-wrap:pretty;">Since now this part is not in a form and has it's own step in the flow, <strong style="color:#F5F3EE;">we have the freedom to be more creative.</strong></p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+          <div style="min-width:0; padding:22px; border-radius:14px; border:1px solid rgba(245,243,238,.12); font-size:15px; line-height:1.6; color:rgba(245,243,238,.72);">We used <strong style="color:#FF5A36;">8 general categories</strong> instead of 1200</div>
+          <div style="min-width:0; padding:22px; border-radius:14px; border:1px solid rgba(245,243,238,.12); font-size:15px; line-height:1.6; color:rgba(245,243,238,.72);">Added an <strong style="color:#FF5A36;">'I don't know'</strong> option</div>
+          <div style="min-width:0; padding:22px; border-radius:14px; border:1px solid rgba(245,243,238,.12); font-size:15px; line-height:1.6; color:rgba(245,243,238,.72);">Added a <strong style="color:#FF5A36;">search bar</strong> for who knows</div>
+        </div>
+      </div>
+
+      <div style="padding:clamp(24px,3vw,38px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(19px,2.1vw,26px); font-weight:600; letter-spacing:-.02em; margin:0 0 16px;"><span style="color:#FF5A36;">·</span> Could type of services be more practical?</h3>
+        <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.72); margin:0 0 24px; max-width:74ch; text-wrap:pretty;">We observed many users <strong style="color:#F5F3EE;">struggling to choose</strong> the right type of service. Part of this issue originated from <strong style="color:#F5F3EE;">UX writing</strong> that <strong style="color:#F5F3EE;">wasn't easily understandable</strong> for the average person. Based on <strong style="color:#F5F3EE;">user behavior</strong> and our <strong style="color:#F5F3EE;">capabilities</strong>, we decided to:</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(18px,3vw,44px); padding:22px 0; border-top:1px solid rgba(245,243,238,.1); border-bottom:1px solid rgba(245,243,238,.1);">
+          <div style="min-width:0; display:grid; gap:12px; font-size:15.5px; color:rgba(245,243,238,.34);">
+            <span>Advocacy</span><span>Consultant</span><span>Contracts</span><span>Judicial documents</span>
+          </div>
+          <div style="min-width:0; display:grid; gap:12px; font:600 15.5px/1.3 'Space Grotesk',sans-serif; color:#F5F3EE;">
+            <span>Advocacy</span><span>Consultant before advocacy</span><span>In person consultant</span><span>On call consultant</span>
+          </div>
+        </div>
+        <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.72); margin:24px 0 0; max-width:74ch; text-wrap:pretty;"><strong style="color:#F5F3EE;">Consultants</strong> were the <strong style="color:#F5F3EE;">best way to engage users</strong>, with many transitioning to different services afterward. <strong style="color:#F5F3EE;">Advocacy</strong> was the <strong style="color:#F5F3EE;">most beneficial service</strong> for Dadsun. We want to <strong style="color:#F5F3EE;">sell them better.</strong></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 32px;">A smoother flow</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px;">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
+        <div style="min-width:0; padding:30px 26px; border-radius:18px; background:linear-gradient(150deg,#3A1042,#2A0E33); border:1px solid rgba(255,90,54,.28);">
+          <div style="display:flex; gap:12px; align-items:baseline; margin-bottom:18px;">
+            <span style="font:700 20px 'Space Grotesk',sans-serif; color:#FF5A36;">{{ st.num }}</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; letter-spacing:-.01em; margin:0; color:#F5F3EE;">{{ st.title }}</h3>
+          </div>
+          <div style="display:grid; gap:10px;">
+            <sc-for list="{{ st.points }}" as="p" hint-placeholder-count="2">
+              <div style="display:flex; gap:10px; font-size:15.5px; line-height:1.55; color:rgba(245,243,238,.8);"><span style="color:#FF5A36;">▪</span><span>{{ p }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 32px;">Some comparison</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px;">
+
+      <div style="min-width:0; padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <div style="display:flex; align-items:center; gap:18px; margin-bottom:22px;">
+          <div style="width:64px; height:64px; border-radius:14px; background:#F2905F; flex:none;"></div>
+          <span style="font-size:14px; color:rgba(245,243,238,.45);">to</span>
+          <div style="width:64px; height:64px; border-radius:14px; background:#FF3D14; flex:none;"></div>
+        </div>
+        <div style="display:grid; gap:10px; font-size:15.5px; line-height:1.6; color:rgba(245,243,238,.72);">
+          <div>To have a <strong style="color:#F5F3EE;">sharper color.</strong></div>
+          <div>To increase contrast for <strong style="color:#F5F3EE;">better usability.</strong></div>
+          <div>To allow <strong style="color:#F5F3EE;">occasional writing</strong> with this color.</div>
+        </div>
+      </div>
+
+      <div style="min-width:0; padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <div style="display:flex; align-items:center; gap:18px; margin-bottom:22px;">
+          <div style="width:64px; height:64px; border-radius:14px; background:linear-gradient(135deg,#E8A06A,#1B9B84); flex:none;"></div>
+          <span style="font-size:14px; color:rgba(245,243,238,.45);">to</span>
+          <div style="width:64px; height:64px; border-radius:14px; background:#3B0F3D; flex:none;"></div>
+        </div>
+        <div style="display:grid; gap:10px; font-size:15.5px; line-height:1.6; color:rgba(245,243,238,.72);">
+          <div>To have a color that <strong style="color:#F5F3EE;">complements</strong> both our <strong style="color:#F5F3EE;">green</strong> and <strong style="color:#F5F3EE;">orange.</strong></div>
+          <div>To create a <strong style="color:#F5F3EE;">more aesthetic background</strong> for our flow.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Before and after</h2>
+    <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.6); margin:0 0 36px; max-width:60ch;">Each section below shows the shipped screen against the one it replaced, with the thinking behind the change.</p>
+    <div style="display:grid; gap:clamp(28px,4vw,52px);">
+      <sc-for list="{{ boards }}" as="b" hint-placeholder-count="5">
+        <div style="min-width:0;">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2vw,24px); font-weight:600; letter-spacing:-.01em; margin:0 0 16px; color:#F5F3EE;">{{ b.title }}</h3>
+          <div style="border-radius:20px; overflow:hidden; background:#F7F7FB; border:1px solid rgba(245,243,238,.12);">
+            <img src="{{ b.src }}" alt="{{ b.alt }}" loading="lazy" style="width:100%; display:block;">
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Outsourced artworks</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px;">Illustrations by Paniz Diba, commissioned for the redesign.</p>
+    <div style="border-radius:20px; overflow:hidden; background:#F7F7FB; border:1px solid rgba(245,243,238,.12);">
+      <img src="./assets/dadsun-illustrations.png" alt="Ten commissioned illustrations of legal scenarios: secure platform, lawyer on the phone, lawyer profiles, handshake, designer at work, support team, profile comparison, three-step flow, verified document, and a group of attorneys" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 32px;">Achievements</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+      <sc-for list="{{ results }}" as="r" hint-placeholder-count="3">
+        <div style="min-width:0; padding:clamp(28px,3vw,40px); border-radius:18px; background:rgba(18,18,22,.6); border:1px dashed rgba(58,209,160,.45); text-align:center;">
+          <div style="font:700 clamp(38px,5vw,60px)/1 'Space Grotesk',sans-serif; color:#F5F3EE; margin-bottom:14px;">{{ r.value }}</div>
+          <div style="font-size:15.5px; line-height:1.5; color:rgba(245,243,238,.68);">{{ r.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(56px,7vw,100px) clamp(24px,7vw,120px) clamp(48px,6vw,72px); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.6vw,46px); font-weight:600; letter-spacing:-.025em; margin:0 0 20px;">Thank you!</h2>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.7); margin:0 0 36px; max-width:70ch; text-wrap:pretty;">While I've only provided a brief overview of the project here, it feels appropriate to conclude at this point. It's worth noting that this project was originally created in Persian. For the purposes of showcase for this case study, excerpts were translated to english, which is why I haven't included more shots. Feel free to contact me if you have any questions or if my experience on this project could be helpful for yours!</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="Contact.dc.html" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="background:#ffffff">Get in touch</a>
+        <a href="Case Study 02 Limoo.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">Next: Limoo →</a>
+        <a href="https://www.behance.net/gallery/210523531/Enhancing-landing-page-acquisition-with-UX-improvement" target="_blank" rel="noopener" style="border:1px solid rgba(245,243,238,.28); color:rgba(245,243,238,.7); padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE; color:#F5F3EE">View on Behance</a>
+      </div>
+      <div style="display:flex; gap:26px; margin-top:44px; font-size:14px; flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/in/alibekmaz/" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">LinkedIn</a>
+        <a href="https://www.behance.net/alibekmaz" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">Behance</a>
+        <a href="mailto:AliBekmaz1999@gmail.com" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">AliBekmaz1999@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { scrolled: false, read: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const doc = document.documentElement;
+      const max = Math.max(1, doc.scrollHeight - innerHeight);
+      const y = window.scrollY || doc.scrollTop || 0;
+      const read = Math.min(1, Math.max(0, y / max));
+      const scrolled = y > 260;
+      if (read !== this.state.read || scrolled !== this.state.scrolled) this.setState({ read, scrolled });
+    };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    removeEventListener('scroll', this.onScroll);
+    removeEventListener('resize', this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      barShift: this.state.scrolled ? 'translateY(0)' : 'translateY(-101%)',
+      barOpacity: this.state.scrolled ? 1 : 0,
+      readPercent: Math.round(this.state.read * 100) + '%',
+      readWidth: (this.state.read * 100).toFixed(2) + '%',
+      chapters: ["Process explanation","Flow redesign","Design challenges","Comparison","Color pallet adjustment","Illustrations","Decision making process","Business value proposition","Prototyping"],
+      stats: [
+        { value:"50,000", label:"Active users in 4 years" },
+        { value:"92%", label:"Satisfaction rate" },
+        { value:"10,000", label:"Daily user sessions" },
+        { value:"2000", label:"Daily CTA click" },
+        { value:"200", label:"Completing first step (registration)" },
+        { value:">10", label:"Submission request" }
+      ],
+      goals: [
+        { num:"1.", title:"Increase submitted requests", body:"By simplify Dadsun presentation, improve user experience in the flow, and make the process easier and shorter" },
+        { num:"2.", title:"Increase time on page.", body:"By improving UX writing and creating more diverse content" },
+        { num:"3.", title:"Decrease on user bounce rate.", body:"Show users they are in the right place by enhancing the first impression through aesthetic usability and stronger mottos." }
+      ],
+      steps: [
+        { num:"1.", title:"City", points:["An easy step to start from","Executable in various styles across all pages"] },
+        { num:"2.", title:"Category", points:["Clear categories","Search bar","Availability of an 'I don't know' option."] },
+        { num:"3.", title:"Type of service", points:["Focus on attracting advocacy & consultant customers","Distinguishable items and sufficient contrast"] }
+      ],
+      boards: [
+        { title:"Hero section", src:"./assets/dadsun-hero.png", alt:"Hero section before and after: the old hero with four CTAs replaced by a purple hero with a single city-selection step" },
+        { title:"Lawyers card in home page", src:"./assets/dadsun-card-home.png", alt:"Lawyer card before and after, with certification badge, rating, experience, services completed and location" },
+        { title:"Dadsun promotion card in lawyers listing page", src:"./assets/dadsun-promo-card.png", alt:"Promotion card before and after: gradient card with share buttons replaced by a purple card containing the first flow step" },
+        { title:"Lawyers card in lawyers listing page", src:"./assets/dadsun-card-listing.png", alt:"Listing card before and after, the new version showing score detail, lawyer services and summary of specialties" },
+        { title:"Lawyers profile header in lawyers detail page", src:"./assets/dadsun-profile-header.png", alt:"Profile header before and after: four service CTAs replaced by a sticky card with one send-request CTA" }
+      ],
+      results: [
+        { value:"36%", label:"more time spent on website" },
+        { value:"49%", label:"higher request submissions" },
+        { value:"55%", label:"decrease in bounce rate" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

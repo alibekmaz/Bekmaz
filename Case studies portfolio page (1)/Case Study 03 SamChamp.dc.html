@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#0B0B0D; }
+    * { box-sizing:border-box; }
+    ::selection { background:#FF5A36; color:#0B0B0D; }
+    a { color:#FF5A36; }
+    a:hover { color:#ff8163; }
+  </style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh;">
+
+  <header style="position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px clamp(20px,5vw,44px); background:linear-gradient(#0B0B0Dee,#0B0B0Dcc); backdrop-filter:blur(6px); border-bottom:1px solid rgba(245,243,238,.07);">
+    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none;"><img src="./logo.png" alt="Ali Bekmaz" style="height:32px; width:auto; display:block;"></a>
+    <nav style="display:flex; gap:clamp(16px,2.4vw,32px); font-size:15px; flex-wrap:wrap;">
+      <a href="Home.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Home</a>
+      <a href="Case Studies 3D.dc.html" style="color:#F5F3EE; text-decoration:none;">Case Studies</a>
+      <a href="About.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">About Me</a>
+      <a href="Contact.dc.html" style="color:rgba(245,243,238,.6); text-decoration:none;" style-hover="color:#F5F3EE">Contact</a>
+    </nav>
+    <a href="https://drive.google.com/file/d/1BkpXVReO3xVtiiDU6XGT59yu6IS6yZ07/view?usp=sharing" style="background:#FF5A36; color:#0B0B0D; padding:10px 20px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; white-space:nowrap;" style-hover="background:#ff7654">Download CV</a>
+  </header>
+
+  <div style="position:fixed; top:72px; left:0; right:0; z-index:19; transform:{{ barShift }}; opacity:{{ barOpacity }}; transition:transform .32s cubic-bezier(.2,.7,.2,1), opacity .24s ease; background:rgba(11,11,13,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,.09);">
+    <div style="display:flex; align-items:center; gap:clamp(12px,2vw,24px); max-width:1180px; margin:0 auto; padding:12px clamp(24px,7vw,120px);">
+      <a href="Case Studies 3D.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 14px 7px 11px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)"><span style="font-size:15px; line-height:1;">←</span>All case studies</a>
+      <div style="min-width:0; flex:1; display:flex; align-items:baseline; gap:10px; overflow:hidden;">
+        <span style="font:700 13px 'Space Grotesk',sans-serif; color:#F5A623; flex:none;">03</span>
+        <span style="font:600 15px 'Space Grotesk',sans-serif; color:#F5F3EE; flex:none;">SamChamp</span>
+        <span style="font-size:13.5px; color:rgba(245,243,238,.42); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">FIFA competition hub</span>
+      </div>
+      <span style="flex:none; font:600 13px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.5); font-variant-numeric:tabular-nums;">{{ readPercent }}</span>
+      <a href="Case Study 04 Arman.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 11px 7px 14px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)">Next: Arman<span style="font-size:15px; line-height:1;">→</span></a>
+    </div>
+    <div style="height:2px; background:rgba(245,243,238,.08);">
+      <div style="height:100%; width:{{ readWidth }}; background:#F5A623; transition:width .1s linear;"></div>
+    </div>
+  </div>
+
+  <section style="padding:clamp(40px,6vw,88px) clamp(24px,7vw,120px) clamp(32px,4vw,56px); max-width:1180px; margin:0 auto;">
+    <a href="Case Studies 3D.dc.html" style="display:inline-block; font-size:13.5px; letter-spacing:.06em; text-decoration:none; color:rgba(245,243,238,.5); margin-bottom:28px;" style-hover="color:#FF5A36">← ALL CASE STUDIES</a>
+    <div style="font-size:12px; letter-spacing:.14em; color:#F5A623; margin-bottom:16px;">03 · SAMCHAMP · FIFA COMPETITION HUB</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(34px,5vw,64px); font-weight:600; line-height:1.06; letter-spacing:-.03em; margin:0 0 24px; max-width:22ch; text-wrap:pretty;">SamChamp, a FIFA competition hub</h1>
+    <p style="font-size:17px; line-height:1.7; color:rgba(245,243,238,.7); margin:0 0 40px; max-width:60ch; text-wrap:pretty;">A mobile platform for creating paid matches, joining tournaments, managing prize pools, and submitting verified results.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(20px,3vw,40px); padding:28px clamp(24px,3vw,36px); border-radius:20px; background:rgba(18,18,22,.7); border:1px solid rgba(245,243,238,.1);">
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">ROLE</div>
+        <div style="font-size:15px; line-height:1.5;">Product designer</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">PLATFORM</div>
+        <div style="font-size:15px; line-height:1.5;">Mobile app</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TOOLS</div>
+        <div style="font-size:15px; line-height:1.5;">Figma</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">WITH</div>
+        <div style="font-size:15px; line-height:1.5;">Mahshid Asadi</div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;">
+      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="7">
+        <span style="font-size:13.5px; padding:9px 16px; border-radius:999px; border:1px solid rgba(245,243,238,.16); color:rgba(245,243,238,.68);">{{ t }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <div style="border-radius:24px; overflow:hidden; background:#0E0E10; border:1px solid rgba(245,243,238,.1);">
+      <img src="./assets/samchamp-hero.png" alt="SamChamp app shown on a floating phone against amber glass spheres, displaying total balance, my matches and one-versus-one opponents" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 24px;">Project context</h2>
+    <p style="font-size:17px; line-height:1.75; color:rgba(245,243,238,.75); margin:0; max-width:64ch; text-wrap:pretty;">SamChamp was designed for FIFA players who wanted more control than in-game matchmaking, from choosing opponents and setting entry fees to joining tournaments and competing for real prizes.</p>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); background:linear-gradient(140deg,rgba(245,166,35,.1),rgba(245,166,35,.02)); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 32px;">Problem</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+        <sc-for list="{{ problems }}" as="p" hint-placeholder-count="4">
+          <div style="min-width:0; padding:30px 26px; border-radius:18px; background:rgba(18,18,22,.75); border:1px solid rgba(245,166,35,.22);">
+            <div style="width:34px; height:34px; border-radius:999px; background:linear-gradient(135deg,#F5A623,#E0651B); margin-bottom:22px;"></div>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; line-height:1.3; margin:0; color:#F5F3EE;">{{ p }}</h3>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 32px;">Core experience</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:clamp(28px,4vw,44px);">
+      <sc-for list="{{ core }}" as="c" hint-placeholder-count="4">
+        <div style="min-width:0; padding:30px 26px; border-radius:18px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.12);" style-hover="border-color:rgba(245,166,35,.5)">
+          <div style="font:700 15px 'Space Grotesk',sans-serif; color:#F5A623; margin-bottom:18px;">{{ c.num }}</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; line-height:1.28; margin:0 0 10px;">{{ c.title }}</h3>
+          <p style="font-size:15px; line-height:1.6; color:rgba(245,243,238,.62); margin:0; text-wrap:pretty;">{{ c.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-radius:20px; overflow:hidden; background:#0E0E10; border:1px solid rgba(245,243,238,.1);">
+      <img src="./assets/samchamp-core.png" alt="Core experience board: find opponents, join tournaments, manage prize pools and submit results, shown as glass cards over a ridged black surface" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 28px;">Information architecture</h2>
+    <div style="border-radius:20px; overflow:hidden; background:#0E0E10; border:1px solid rgba(245,243,238,.1);">
+      <img src="./assets/samchamp-ia.png" alt="Information architecture branching from home into one-versus-one availability, notifications, menu with wallet and rules, wallet brief with deposit and withdraw, upcoming matches, find 1v1 matches with console and game filters, and find tournament" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Screens</h2>
+    <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.6); margin:0 0 36px; max-width:60ch;">Wallet and match dashboard, the match calendar, notifications with accept and decline actions, club selection by league, and result submission.</p>
+    <div style="display:grid; gap:clamp(28px,4vw,52px);">
+      <sc-for list="{{ boards }}" as="b" hint-placeholder-count="4">
+        <div style="min-width:0;">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2vw,24px); font-weight:600; letter-spacing:-.01em; margin:0 0 16px; color:#F5F3EE;">{{ b.title }}</h3>
+          <div style="border-radius:20px; overflow:hidden; background:#0E0E10; border:1px solid rgba(245,243,238,.1);">
+            <img src="{{ b.src }}" alt="{{ b.alt }}" loading="lazy" style="width:100%; display:block;">
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 32px;">Type and colour</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-bottom:clamp(24px,3vw,36px);">
+      <div style="min-width:0; padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <div style="font-size:12px; letter-spacing:.14em; color:rgba(245,243,238,.45); margin-bottom:22px;">TYPEFACE</div>
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+          <div style="display:grid; gap:6px; font-size:16px;">
+            <span style="font-weight:400; color:rgba(245,243,238,.6);">Regular</span>
+            <span style="font-weight:500; color:rgba(245,243,238,.8);">Medium</span>
+            <span style="font-weight:600; color:#F5F3EE;">Semibold</span>
+          </div>
+          <div style="font:600 56px 'Space Grotesk',sans-serif; letter-spacing:-.03em;">Rubik</div>
+        </div>
+      </div>
+      <div style="min-width:0; padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+        <div style="font-size:12px; letter-spacing:.14em; color:rgba(245,243,238,.45); margin-bottom:22px;">PALETTE</div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <div style="width:60px; height:60px; border-radius:14px; background:#F5A623;"></div>
+          <div style="width:60px; height:60px; border-radius:14px; background:#2A2A26;"></div>
+          <div style="width:60px; height:60px; border-radius:14px; background:#1E1E22;"></div>
+          <div style="width:60px; height:60px; border-radius:14px; background:#121214;"></div>
+          <div style="width:60px; height:60px; border-radius:14px; background:#FFFFFF;"></div>
+        </div>
+      </div>
+    </div>
+    <div style="border-radius:20px; overflow:hidden; background:#0E0E10; border:1px solid rgba(245,243,238,.1);">
+      <img src="./assets/samchamp-brand.png" alt="Brand board showing Rubik weights and the amber, charcoal and white palette over a bronze abstract render" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <div style="border-radius:20px; overflow:hidden; background:#0E0E10; border:1px solid rgba(245,243,238,.1);">
+      <img src="./assets/samchamp-desk.png" alt="The Matches screen shown on a phone lying on a dark desk beside a keyboard, notebook and coffee" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <footer style="padding:clamp(56px,7vw,100px) clamp(24px,7vw,120px) clamp(48px,6vw,72px); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.6vw,46px); font-weight:600; letter-spacing:-.025em; margin:0 0 20px;">Thank you for watching!</h2>
+      <p style="font-size:15px; color:rgba(245,243,238,.45); margin:0 0 36px;">Designed with Mahshid Asadi.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="Contact.dc.html" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="background:#ffffff">Get in touch</a>
+        <a href="Case Study 02 Limoo.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">← Limoo</a>
+        <a href="Case Study 04 Arman.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">Next: Arman →</a>
+      </div>
+      <div style="display:flex; gap:26px; margin-top:44px; font-size:14px; flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/in/alibekmaz/" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">LinkedIn</a>
+        <a href="https://www.behance.net/alibekmaz" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">Behance</a>
+        <a href="mailto:AliBekmaz1999@gmail.com" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">AliBekmaz1999@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { scrolled: false, read: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const doc = document.documentElement;
+      const max = Math.max(1, doc.scrollHeight - innerHeight);
+      const y = window.scrollY || doc.scrollTop || 0;
+      const read = Math.min(1, Math.max(0, y / max));
+      const scrolled = y > 260;
+      if (read !== this.state.read || scrolled !== this.state.scrolled) this.setState({ read, scrolled });
+    };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    removeEventListener('scroll', this.onScroll);
+    removeEventListener('resize', this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      barShift: this.state.scrolled ? 'translateY(0)' : 'translateY(-101%)',
+      barOpacity: this.state.scrolled ? 1 : 0,
+      readPercent: Math.round(this.state.read * 100) + '%',
+      readWidth: (this.state.read * 100).toFixed(2) + '%',
+      tags: ["UI design","UX design","Mobile app","Gaming","Esports","Product design","Fintech","Tournament"],
+      problems: [
+        "Finding trusted opponents",
+        "Limited matchmaking control",
+        "Prize management complexity",
+        "Result validation & transparency"
+      ],
+      core: [
+        { num:"01", title:"Find opponents", body:"Filter by console and game, then pick an opponent from their win rate." },
+        { num:"02", title:"Join tournaments", body:"Browse and enter tournaments with a visible entry fee and prize." },
+        { num:"03", title:"Manage prize pools", body:"A wallet with balance, deposit and withdraw at the top of the app." },
+        { num:"04", title:"Submit results", body:"Both players enter goals, with a 24 hour window and a verified outcome." }
+      ],
+      boards: [
+        { title:"Wallet, matches and calendar", src:"./assets/samchamp-dashboard.png", alt:"Match list with knockout single matches, total balance card with deposit and withdraw, a month calendar of fixtures, and a list of match states including finished and eliminated" },
+        { title:"Notifications and club selection", src:"./assets/samchamp-notifications.png", alt:"Notification list with new match requests to accept or decline and result submission reminders, next to a club picker grouped by La Liga, Premier League and Serie A" },
+        { title:"Full screen set", src:"./assets/samchamp-screens.png", alt:"Screen set including login, one-versus-one opponent list with win rates, matches with calendar, match detail with result submission, and previous opponents" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
