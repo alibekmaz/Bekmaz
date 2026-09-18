@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#0B0B0D; }
+    * { box-sizing:border-box; }
+    ::selection { background:#FF5A36; color:#0B0B0D; }
+    a { color:#FF5A36; }
+    a:hover { color:#ff8163; }
+  </style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif; background:#0B0B0D; color:#F5F3EE; min-height:100vh;">
+
+  <dc-import name="SiteNav" active="case" cv-href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" hint-size="100%,74px" style="position:sticky; top:0; z-index:30;"></dc-import>
+
+  <div style="position:fixed; top:72px; left:0; right:0; z-index:19; transform:{{ barShift }}; opacity:{{ barOpacity }}; transition:transform .32s cubic-bezier(.2,.7,.2,1), opacity .24s ease; background:rgba(11,11,13,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,.09);">
+    <div style="display:flex; align-items:center; gap:clamp(12px,2vw,24px); max-width:1180px; margin:0 auto; padding:12px clamp(24px,7vw,120px);">
+      <a href="Case Studies 3D.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:{{ backPad }}; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)"><span style="font-size:15px; line-height:1;">←</span><span style="display:{{ backLabel }}">All case studies</span></a>
+      <div style="min-width:0; flex:1; display:flex; align-items:baseline; gap:10px; overflow:hidden;">
+        <span style="font:700 13px 'Space Grotesk',sans-serif; color:#4DA6E8; flex:none;">05</span>
+        <span style="font:600 15px 'Space Grotesk',sans-serif; color:#F5F3EE; flex:none;">Trivago</span>
+        <span style="font-size:13.5px; color:rgba(245,243,238,.42); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">UI improvement study</span>
+      </div>
+      <span style="flex:none; font:600 13px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.5); font-variant-numeric:tabular-nums;">{{ readPercent }}</span>
+      <a href="Case Study 01 Dadsun.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 11px 7px 14px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)">Next: Dadsun<span style="font-size:15px; line-height:1;">→</span></a>
+    </div>
+    <div style="height:2px; background:rgba(245,243,238,.08);">
+      <div style="height:100%; width:{{ readWidth }}; background:#4DA6E8; transition:width .1s linear;"></div>
+    </div>
+  </div>
+
+  <section style="padding:clamp(40px,6vw,88px) clamp(24px,7vw,120px) clamp(32px,4vw,56px); max-width:1180px; margin:0 auto;">
+    <a href="Case Studies 3D.dc.html" style="display:inline-block; font-size:13.5px; letter-spacing:.06em; text-decoration:none; color:rgba(245,243,238,.5); margin-bottom:28px;" style-hover="color:#FF5A36">← ALL CASE STUDIES</a>
+    <div style="font-size:12px; letter-spacing:.14em; color:#4DA6E8; margin-bottom:16px;">05 · TRIVAGO · UI IMPROVEMENT STUDY</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(34px,5vw,64px); font-weight:600; line-height:1.06; letter-spacing:-.03em; margin:0 0 20px; max-width:22ch; text-wrap:pretty;">A case study of possible UI improvements</h1>
+    <p style="font-size:19px; line-height:1.6; color:rgba(245,243,238,.6); margin:0 0 40px; max-width:62ch; text-wrap:pretty;">Get familiar with trivago's products keeping in consideration our different platforms: desktop, mobile web, and apps.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(20px,3vw,40px); padding:28px clamp(24px,3vw,36px); border-radius:20px; background:rgba(18,18,22,.7); border:1px solid rgba(245,243,238,.1);">
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">ROLE</div>
+        <div style="font-size:15px; line-height:1.5;">Product designer</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TIMEBOX</div>
+        <div style="font-size:15px; line-height:1.5;">Six hours</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">TOOLS</div>
+        <div style="font-size:15px; line-height:1.5;">Notion, Figma, Figma plugins</div>
+      </div>
+      <div style="min-width:0;">
+        <div style="font-size:11.5px; letter-spacing:.13em; color:rgba(245,243,238,.42); margin-bottom:8px;">SCOPE</div>
+        <div style="font-size:15px; line-height:1.5;">Desktop UI, applicable to mobile</div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;">
+      <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="6">
+        <span style="font-size:13.5px; padding:9px 16px; border-radius:999px; border:1px solid rgba(245,243,238,.16); color:rgba(245,243,238,.68);">{{ c }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 24px;">The brief</h2>
+    <div style="display:grid; gap:14px; max-width:74ch;">
+      <div style="display:flex; gap:14px; font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.75);"><span style="color:#4DA6E8;">▪</span><span>Focusing on UI, propose 2-3 improvements to the current experience applicable for all our platforms.</span></div>
+      <div style="display:flex; gap:14px; font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.75);"><span style="color:#4DA6E8;">▪</span><span>Please explain why your idea is improving the product.</span></div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 28px;">My process</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+      <sc-for list="{{ process }}" as="p" hint-placeholder-count="4">
+        <div style="min-width:0; padding:26px 24px; border-radius:16px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <div style="font:700 24px 'Space Grotesk',sans-serif; color:rgba(245,243,238,.2); margin-bottom:14px;">{{ p.num }}</div>
+          <div style="font-size:15.5px; line-height:1.6; color:rgba(245,243,238,.78); margin-bottom:16px; text-wrap:pretty;">{{ p.text }}</div>
+          <div style="font-size:12.5px; letter-spacing:.09em; color:#4DA6E8;">{{ p.time }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto; border-top:1px solid rgba(245,243,238,.08);">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 24px;">Intro</h2>
+    <div style="display:grid; gap:20px; max-width:74ch;">
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0; text-wrap:pretty;">After setting my time management plan, I began exploring Trivago's platforms. While the UI wasn't as pleasant as I expected, the platform's consistency was good. I imagined myself as different types of customers: a poor student seeking cheap travel, a luxury traveler, a professional user needing efficient tools, and a disabled user facing challenges.</p>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0; text-wrap:pretty;">During this exploration, I encountered usability issues, poor information architecture, and unclear UX writing, especially on the result pages. Therefore, my first suggested improvement focuses on enhancing the components and layout of these pages.</p>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0; text-wrap:pretty;">Additionally, while using Trivago, I thought of an alternative flow to help users to choose the most suitable accommodation option. This idea arose from the overwhelming number of similar options, making it harder to decide. This new flow will be my second suggested improvement.</p>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0; text-wrap:pretty;">At the end I noted Some points and questions that could lead to possible adjustments in different parts, which I decided not to pursue in this case study.</p>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.62); margin:0; padding-left:18px; border-left:2px solid rgba(77,166,232,.6); text-wrap:pretty;">The UI design in this case study focuses on desktop, I envision applying these changes to mobile; however, I haven't had enough time for that here.</p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); background:linear-gradient(140deg,rgba(77,166,232,.11),rgba(77,166,232,.02)); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="font-size:12px; letter-spacing:.14em; color:#4DA6E8; margin-bottom:14px;">FIRST SUGGESTION</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 34px;">Result view on desktop</h2>
+
+      <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; margin:0 0 18px;">Initial assumptions</h3>
+      <div style="display:grid; gap:14px; margin-bottom:40px;">
+        <sc-for list="{{ assumptions }}" as="a" hint-placeholder-count="3">
+          <div style="display:flex; gap:14px; font-size:16.5px; line-height:1.7; color:rgba(245,243,238,.78);"><span style="color:#4DA6E8;">▪</span><span>{{ a }}</span></div>
+        </sc-for>
+      </div>
+
+      <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; margin:0 0 18px;">Suggested analysis process</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px;">
+        <sc-for list="{{ analysis }}" as="a" hint-placeholder-count="2">
+          <div style="min-width:0; padding:clamp(24px,3vw,32px); border-radius:18px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+            <h4 style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; margin:0 0 12px;">{{ a.title }}</h4>
+            <p style="font-size:15.5px; line-height:1.7; color:rgba(245,243,238,.72); margin:0; text-wrap:pretty;">{{ a.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Possible issues</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px; max-width:64ch;">Let's assume that we did analysis process, compiled the data and here are the results.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;">
+      <sc-for list="{{ issues }}" as="i" hint-placeholder-count="3">
+        <div style="min-width:0; padding:26px; border-radius:16px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1); font-size:16px; line-height:1.68; color:rgba(245,243,238,.75); text-wrap:pretty;">{{ i }}</div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 28px;">Solutions</h2>
+    <div style="display:grid; gap:18px;">
+      <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="2">
+        <div style="padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <div style="display:flex; gap:16px; align-items:baseline; margin-bottom:14px;">
+            <span style="font:700 15px 'Space Grotesk',sans-serif; color:#4DA6E8; flex:none;">{{ s.num }}</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; margin:0;">{{ s.title }}</h3>
+          </div>
+          <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.74); margin:0 0 18px; text-wrap:pretty;">{{ s.body }}</p>
+          <div style="display:grid; gap:10px;">
+            <sc-for list="{{ s.notes }}" as="n" hint-placeholder-count="4">
+              <div style="display:flex; gap:11px; font-size:15px; line-height:1.6; color:rgba(245,243,238,.66);"><span style="color:rgba(77,166,232,.8);">▪</span><span>{{ n }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Final UI</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px;">Designed on a 1280 × 832 frame. Simplified cards, clearer hierarchy, and the map replaced by a sticky "View on Map" button that follows the hovered card.</p>
+    <div style="border-radius:20px; overflow:hidden; background:#FBF7F2; border:1px solid rgba(245,243,238,.12);">
+      <img src="./assets/trivago-final-ui.png" alt="Redesigned Trivago result page with filter row, sort chip, simplified hotel cards showing star rating, distance, options count, review score and a single lowest price block, plus a sticky View on Map button showing the hovered hotel price" loading="lazy" style="width:100%; display:block;">
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); background:linear-gradient(140deg,rgba(77,166,232,.11),rgba(77,166,232,.02)); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="font-size:12px; letter-spacing:.14em; color:#4DA6E8; margin-bottom:14px;">SECOND SUGGESTION</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 24px;">A unique experience to find the best suitable option</h2>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0 0 30px; max-width:74ch; text-wrap:pretty;">To have the best impact in redesigning a service we need to diagnose the problem first. To do that, we need to draw user funnel. Let's assume the business goal is user visiting the hotel website by clicking on price CTA.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-bottom:30px;">
+        <sc-for list="{{ funnel }}" as="f" hint-placeholder-count="3">
+          <div style="min-width:0; padding:26px 24px; border-radius:18px; background:rgba(18,18,22,.7); border:1px solid rgba(245,243,238,.1);">
+            <div style="font:700 34px 'Space Grotesk',sans-serif; color:#4DA6E8; margin-bottom:12px;">{{ f.pct }}</div>
+            <div style="font-size:15.5px; line-height:1.6; color:rgba(245,243,238,.74); text-wrap:pretty;">{{ f.text }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.72); margin:0 0 16px; max-width:74ch;">If we want to improve our funnel we have two different options:</p>
+      <div style="display:grid; gap:12px; margin-bottom:30px;">
+        <div style="display:flex; gap:14px; font-size:16px; line-height:1.65; color:rgba(245,243,238,.6);"><span style="color:rgba(77,166,232,.7);">▪</span><span>Improve conversion from step 1 to step 2 (low impact)</span></div>
+        <div style="display:flex; gap:14px; font-size:16px; line-height:1.65; color:rgba(245,243,238,.9);"><span style="color:#4DA6E8;">▪</span><span>Improve conversion from step 2 to step 3 (high impact)</span></div>
+      </div>
+
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0 0 20px; max-width:74ch; text-wrap:pretty;">What makes it hard for users to choose? I think it's because of the "Paradox of choice". The paradox of choice is a phenomenon where an abundance of options can counterintuitively lead to less happiness, less satisfaction, and hamper the ability to make a decision.</p>
+      <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.7); margin:0 0 14px; max-width:74ch;">How can we prove this theory?</p>
+      <div style="display:grid; gap:12px; margin-bottom:26px;">
+        <div style="display:flex; gap:14px; font-size:16px; line-height:1.65; color:rgba(245,243,238,.74);"><span style="color:#4DA6E8;">▪</span><span>Monitor user behavior on analytics tools.</span></div>
+        <div style="display:flex; gap:14px; font-size:16px; line-height:1.65; color:rgba(245,243,238,.74);"><span style="color:#4DA6E8;">▪</span><span>Interview and asking questions from users who abandoned flow.</span></div>
+      </div>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.75); margin:0; max-width:74ch; text-wrap:pretty;">If we can prove this hypothesis and use the data we obtained from the interviews with users, we can redesign a new flow focusing on the simplicity of the selection experience.</p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) clamp(24px,7vw,120px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Solution</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px; max-width:64ch;">Due to time constraints, this is a raw idea that could be refined and adjusted using various different parameters.</p>
+    <div style="display:grid; gap:16px;">
+      <sc-for list="{{ newFlow }}" as="s" hint-placeholder-count="3">
+        <div style="display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:start; padding:clamp(22px,3vw,30px); border-radius:18px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <span style="font:700 15px 'Space Grotesk',sans-serif; color:#4DA6E8; white-space:nowrap;">{{ s.step }}</span>
+          <div style="min-width:0;">
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; margin:0 0 10px;">{{ s.title }}</h3>
+            <p style="font-size:16px; line-height:1.7; color:rgba(245,243,238,.72); margin:0; text-wrap:pretty;">{{ s.body }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:22px; padding:26px 24px; border-radius:16px; background:rgba(77,166,232,.08); border:1px solid rgba(77,166,232,.3);">
+      <div style="font:600 15px 'Space Grotesk',sans-serif; margin-bottom:10px;">Let us do the hard part for you!</div>
+      <div style="font-size:15.5px; line-height:1.7; color:rgba(245,243,238,.72);">Here you can choose if you want us to give you 4 different suggestions only or you want to traditionally scroll on our list. Each of the four suggestions carries a single reason to pick it: <strong style="color:#F5F3EE;">best location, fair price</strong>, <strong style="color:#F5F3EE;">lowest price</strong>, <strong style="color:#F5F3EE;">best location</strong>, <strong style="color:#F5F3EE;">luxury option</strong> — each with an "Another one" swap.</div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">Points and questions</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px; max-width:64ch;">Open threads that could lead us to possible adjustments in different parts.</p>
+    <div style="display:grid; gap:18px;">
+      <sc-for list="{{ questions }}" as="q" hint-placeholder-count="2">
+        <div style="padding:clamp(24px,3vw,34px); border-radius:20px; background:rgba(18,18,22,.66); border:1px solid rgba(245,243,238,.1);">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; margin:0 0 14px; text-wrap:pretty;">{{ q.title }}</h3>
+          <p style="font-size:16px; line-height:1.72; color:rgba(245,243,238,.73); margin:0; text-wrap:pretty;">{{ q.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(24px,7vw,120px) clamp(48px,6vw,80px); max-width:1180px; margin:0 auto;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.4vw,44px); font-weight:600; letter-spacing:-.025em; margin:0 0 12px;">I found a bug that I want to report =)</h2>
+    <p style="font-size:16px; color:rgba(245,243,238,.6); margin:0 0 28px; max-width:64ch;">Hostel HOMEr is available on the list of all Prague results sorted by price, but it's not available when I searched specifically for it.</p>
+    <div style="display:grid; gap:20px;">
+      <div style="border-radius:20px; overflow:hidden; background:#FBF7F2; border:1px solid rgba(245,243,238,.12);">
+        <img src="./assets/trivago-bug-list.png" alt="Prague results sorted by price showing Hostel HOMEr - Old Town Square at forty three dollars per night" loading="lazy" style="width:100%; display:block;">
+      </div>
+      <div style="border-radius:20px; overflow:hidden; background:#FBF7F2; border:1px solid rgba(245,243,238,.12);">
+        <img src="./assets/trivago-bug-search.png" alt="Searching Hostel HomEr directly returns a card saying this stay is not available for your dates" loading="lazy" style="width:100%; display:block;">
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(56px,7vw,100px) clamp(24px,7vw,120px) clamp(48px,6vw,72px); border-top:1px solid rgba(245,243,238,.08);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.6vw,46px); font-weight:600; letter-spacing:-.025em; margin:0 0 20px;">Thank you</h2>
+      <p style="font-size:16.5px; line-height:1.75; color:rgba(245,243,238,.7); margin:0 0 36px; max-width:70ch; text-wrap:pretty;">This was a timeboxed exercise, so the ideas here are deliberately raw. Happy to walk through the reasoning behind any of them.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="Contact.dc.html" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="background:#ffffff">Get in touch</a>
+        <a href="Case Study 04 Arman.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">← Arman</a>
+        <a href="Case Studies 3D.dc.html" style="border:1px solid rgba(245,243,238,.28); color:#F5F3EE; padding:14px 26px; border-radius:14px; text-decoration:none; font:600 15px 'Space Grotesk',sans-serif;" style-hover="border-color:#F5F3EE">All case studies</a>
+      </div>
+      <div style="display:flex; gap:26px; margin-top:44px; font-size:14px; flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/in/alibekmaz/" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">LinkedIn</a>
+        <a href="https://www.behance.net/alibekmaz" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">Behance</a>
+        <a href="mailto:AliBekmaz1999@gmail.com" style="color:rgba(245,243,238,.55); text-decoration:none;" style-hover="color:#F5F3EE">AliBekmaz1999@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { scrolled: false, read: 0, narrow: false };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const doc = document.documentElement;
+      const max = Math.max(1, doc.scrollHeight - innerHeight);
+      const y = window.scrollY || doc.scrollTop || 0;
+      const read = Math.min(1, Math.max(0, y / max));
+      const scrolled = y > 260;
+      if (read !== this.state.read || scrolled !== this.state.scrolled) this.setState({ read, scrolled });
+    };
+    this.mq = matchMedia('(max-width:720px)');
+    this.onMq = () => this.setState({ narrow: this.mq.matches });
+    this.mq.addEventListener('change', this.onMq);
+    this.onMq();
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
+    removeEventListener('scroll', this.onScroll);
+    removeEventListener('resize', this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      backLabel: this.state.narrow ? 'none' : 'inline',
+      backPad: this.state.narrow ? '7px 11px' : '7px 14px 7px 11px',
+      barShift: this.state.scrolled ? 'translateY(0)' : 'translateY(-101%)',
+      barOpacity: this.state.scrolled ? 1 : 0,
+      readPercent: Math.round(this.state.read * 100) + '%',
+      readWidth: (this.state.read * 100).toFixed(2) + '%',
+      chapters: ["The brief","My process","Result view on desktop","Paradox of choice","Solution","Points and questions"],
+      process: [
+        { num:"1", text:"Checking Desktop, mobile web and app starting from main page and taking note", time:"HALF HOUR" },
+        { num:"2", text:"Opening a Figma page to develop ideas further more", time:"4 HOURS" },
+        { num:"3", text:"Gather all together and finalization ^_^", time:"1 HOUR" },
+        { num:"4", text:"Review and adjustment", time:"HALF HOUR" }
+      ],
+      assumptions: [
+        "Trivago is a platform, not the main service provider.",
+        "Core value is to help user find the best suitable option possible.",
+        "Business makes money by referring travelers to hotel websites."
+      ],
+      analysis: [
+        { title:"Usability test", body:"By testing different types of users with different background we can increase our understanding about how people actually use Trivago as a tool." },
+        { title:"Analytics", body:"Tools like GA4, Heap or even BI tools like Metabase could help us to track user behavior and increase our knowledge about successful rate of different flows or features. The requirement for this one is to set right metrics to be able to correctly count users." }
+      ],
+      issues: [
+        "Map part of the result view could be tricky to use for some users. The act of scrolling will zoom in/out when your mouse is on the map view, and changing the view on map part will reload the results. It means that if someone wants to scroll and does it by mistake on the map view part (which is almost 40% of my screen), the results will change based on the new view of the map.",
+        "When users hover on a card on the list, it will show repetitive info on map view part which will not help user decide.",
+        "Hotel cards could be confusing for some users, specially because there is a lot of different function defined on different part of the card."
+      ],
+      solutions: [
+        { num:"1.", title:"An alternative for map view", body:"The \"View on Map\" sticky button at the bottom of the page. It will still show where is the hotel card that user is hovered on but much more simple. Clicking on it will open full map view.",
+          notes:["Shows the hovered hotel and its price when the user is over a card.","Falls back to a plain map thumbnail when no card is hovered.","Scrolling never reloads the result list by accident."] },
+        { num:"2.", title:"KISS the hotel cards", body:"Keep the hotel card as simple as possible by removing any unnecessary data and revise the architecture of information.",
+          notes:["Better hierarchy to guide users eyes.","More straight forward UX writing and avoiding complexities.","Other offers will be provided here because sometimes they were so similar to each other.","More white space in total."] }
+      ],
+      funnel: [
+        { pct:"100%", text:"User enters the Trivago website directly or from google search or ad or referral link." },
+        { pct:"80%", text:"User use main search to see some options." },
+        { pct:"10%", text:"User have to choose from too many options we provide and click on price CTA to redirect to hotel website." }
+      ],
+      newFlow: [
+        { step:"1ST STEP", title:"Search as usual", body:"User will enter their destination and click on Search." },
+        { step:"2ND STEP", title:"Offer a shortcut", body:"A pop-up asks whether Trivago should narrow things down: \"Give me 4 options!\" or \"Show me normal list of results\"." },
+        { step:"3RD STEP", title:"Four reasoned suggestions", body:"User will choose from four Trivago suggestions, each labelled with why it made the cut, and each swappable for another candidate." }
+      ],
+      questions: [
+        { title:"How could we make better experience in sorting feature?",
+          body:"What is \"recommended\" defined as in Trivago? Does \"How payment to us affects ranking?\" adequately explain the content inside? What is the reason for combining recommendations with other parameters? We could measure the usefulness of this combination by analyzing the number of successful bookings made through these options and counting drops in each of them. Assuming our main goal is to increase bookings through Trivago, if the combination of recommendations with other sorting options results in fewer completed bookings, I suggest keeping it more simple and removing them — we can only offer four sorting parameters (or do what is done in mobile app in the desktop as well): recommendation, price, distance, rating." },
+        { title:"What if we add a comparing feature for people who wants to dig in?",
+          body:"We recognize that probably this flow may hurt some people who have decision making problems. But if we consider applying the idea of offering simple version of the results (2nd suggestion), maybe we can also consider people who are more capable of making decisions. This feature should be easily accessible but not prominently placed, ensuring it is available for those who need it without overwhelming others." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

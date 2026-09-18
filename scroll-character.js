@@ -225,6 +225,8 @@ class ScrollCharacter extends HTMLElement {
       pot:    M(0xb45f38, 0.95),
       leaf:   M(0x4b7347, 0.95),
       book:   M(0xc0863c, 0.95),
+      bookB:  M(0x3f6f7a, 0.95),
+      bookC:  M(0x8c4a3c, 0.95),
       paper:  M(0xe6dccd, 0.96),
       cupM:   M(0xd6cabb, 0.9),
       metal:  M(0x2c2523, 0.75),
@@ -290,7 +292,36 @@ class ScrollCharacter extends HTMLElement {
     band('plant', 0.32, P.pot, P.leaf);
     band('plant2', 0.3, P.pot, P.leaf);
     band('lamp', 0.72, P.metal, P.shade);
-    band('picture', 0.99, P.art, P.frame);
+    const pic = root.getObjectByName('picture');
+    if (pic) pic.visible = false;
+
+    // the notepad on the table: coloured cover, loose sheets stay cream
+    const docGroup = root.getObjectByName('document');
+    if (docGroup) {
+      const pad = docGroup.getObjectByName('Cube_2');
+      if (pad) pad.traverse((o) => { if (o.isMesh) o.material = P.bookB; });
+      const sheet = docGroup.getObjectByName('Rectangle_4');
+      if (sheet) sheet.traverse((o) => { if (o.isMesh) o.material = P.bookC; });
+    }
+
+    // books: a cover colour per volume, cream page block inside
+    const bookGroup = root.getObjectByName('books');
+    if (bookGroup) {
+      const covers = [P.book, P.bookB, P.bookC];
+      bookGroup.children.forEach((vol, i) => {
+        const cover = covers[i % covers.length];
+        const vb = new THREE.Box3().setFromObject(vol);
+        const span = Math.max(vb.max.y - vb.min.y, 1e-4);
+        const meshList = [];
+        vol.traverse((o) => { if (o.isMesh) meshList.push(o); });
+        // per volume the larger box is the cover, the inset one is the page block
+        meshList.sort((a, b) => {
+          const v = (o) => { const s = new THREE.Box3().setFromObject(o).getSize(new THREE.Vector3()); return s.x * s.y * s.z; };
+          return v(b) - v(a);
+        });
+        meshList.forEach((o, k) => { o.material = k === 0 ? cover : P.paper; });
+      });
+    }
 
     // the laptop: drop the embossed logo, put a design tool on the screen
     const laptop = root.getObjectByName('computer');
@@ -549,13 +580,15 @@ class ScrollCharacter extends HTMLElement {
     this.moustache = g;
   }
 
+  // shift = horizontal lens shift (NDC). Negative pushes the character right, positive left.
   static KEYS = [
-    { p: 0.00, pos: [-2.15, 1.35, 3.35], look: [-0.7, 0.9, 0.15], fov: 34 },
-    { p: 0.19, pos: [1.9, 1.45, 2.9], look: [-0.6, 0.95, 0.2], fov: 36 },
-    { p: 0.40, pos: [-2.5, 0.95, 2.5], look: [0.8, 0.9, 0.1], fov: 38 },
-    { p: 0.60, pos: [-1.0, 2.4, -2.7], look: [0.65, 0.8, 0], fov: 42 },
-    { p: 0.80, pos: [-1.7, 0.8, 3.0], look: [0.85, 1.05, 0.2], fov: 34 },
-    { p: 1.00, pos: [-1.9, 1.45, 2.4], look: [1.75, 1.15, 0.1], fov: 30 }
+    { p: 0.000, pos: [-3.36, 1.72, 6.01], look: [-0.7, 0.9, 0.15], fov: 34, shift: -0.28 },
+    { p: 0.162, pos: [4.16, 1.90, 5.34], look: [-0.6, 0.95, 0.2], fov: 36, shift: 0.72 },
+    { p: 0.331, pos: [-4.08, 0.57, 5.62], look: [0.85, 1.05, 0.2], fov: 34, shift: 0.19 },
+    { p: 0.500, pos: [-4.44, 0.98, 3.91], look: [0.8, 0.9, 0.1], fov: 38, shift: -0.69 },
+    { p: 0.669, pos: [-2.45, 3.81, -5.08], look: [0.65, 0.8, 0], fov: 42, shift: 0.49 },
+    { p: 0.838, pos: [-4.97, 1.70, 4.34], look: [1.75, 1.15, 0.1], fov: 30, shift: -0.89 },
+    { p: 1.000, pos: [-3.36, 1.72, 6.01], look: [-0.7, 0.9, 0.15], fov: 34, shift: 0.72 }
   ];
 
   sampleCamera(p) {
@@ -566,7 +599,7 @@ class ScrollCharacter extends HTMLElement {
     let t = Math.min(1, Math.max(0, (p - a.p) / (b.p - a.p)));
     t = t * t * (3 - 2 * t);
     const l = (u, v) => u + (v - u) * t;
-    return { pos: a.pos.map((v, k) => l(v, b.pos[k])), look: a.look.map((v, k) => l(v, b.look[k])), fov: l(a.fov, b.fov) };
+    return { pos: a.pos.map((v, k) => l(v, b.pos[k])), look: a.look.map((v, k) => l(v, b.look[k])), fov: l(a.fov, b.fov), shift: l(a.shift || 0, b.shift || 0) };
   }
 
   loop = () => {
@@ -575,7 +608,9 @@ class ScrollCharacter extends HTMLElement {
     const s = this.sampleCamera(this.scrollP);
     camera.position.set(s.pos[0], s.pos[1], s.pos[2]);
     camera.lookAt(s.look[0], s.look[1], s.look[2]);
-    if (Math.abs(camera.fov - s.fov) > 0.01) { camera.fov = s.fov; camera.updateProjectionMatrix(); }
+    camera.fov = s.fov;
+    camera.updateProjectionMatrix();
+    camera.projectionMatrix.elements[8] = s.shift;
 
     const t = performance.now() / 1000;
     const _e = this._e || (this._e = new THREE.Euler(0, 0, 0, 'XYZ'));

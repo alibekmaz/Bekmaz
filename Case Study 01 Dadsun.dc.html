@@ -25,7 +25,7 @@
 
   <div style="position:fixed; top:72px; left:0; right:0; z-index:19; transform:{{ barShift }}; opacity:{{ barOpacity }}; transition:transform .32s cubic-bezier(.2,.7,.2,1), opacity .24s ease; background:rgba(11,11,13,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(245,243,238,.09);">
     <div style="display:flex; align-items:center; gap:clamp(12px,2vw,24px); max-width:1180px; margin:0 auto; padding:12px clamp(24px,7vw,120px);">
-      <a href="Case Studies 3D.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:7px 14px 7px 11px; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)"><span style="font-size:15px; line-height:1;">←</span>All case studies</a>
+      <a href="Case Studies 3D.dc.html" style="display:flex; align-items:center; gap:8px; flex:none; font-size:13.5px; font-weight:600; text-decoration:none; color:rgba(245,243,238,.6); padding:{{ backPad }}; border-radius:999px; border:1px solid rgba(245,243,238,.16);" style-hover="color:#F5F3EE; border-color:rgba(245,243,238,.4)"><span style="font-size:15px; line-height:1;">←</span><span style="display:{{ backLabel }}">All case studies</span></a>
       <div style="min-width:0; flex:1; display:flex; align-items:baseline; gap:10px; overflow:hidden;">
         <span style="font:700 13px 'Space Grotesk',sans-serif; color:#FF5A36; flex:none;">01</span>
         <span style="font:600 15px 'Space Grotesk',sans-serif; color:#F5F3EE; flex:none;">Dadsun</span>
@@ -269,7 +269,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{}">
 class Component extends DCLogic {
-  state = { scrolled: false, read: 0 };
+  state = { scrolled: false, read: 0, narrow: false };
 
   componentDidMount() {
     this.onScroll = () => {
@@ -280,18 +280,25 @@ class Component extends DCLogic {
       const scrolled = y > 260;
       if (read !== this.state.read || scrolled !== this.state.scrolled) this.setState({ read, scrolled });
     };
+    this.mq = matchMedia('(max-width:720px)');
+    this.onMq = () => this.setState({ narrow: this.mq.matches });
+    this.mq.addEventListener('change', this.onMq);
+    this.onMq();
     addEventListener('scroll', this.onScroll, { passive: true });
     addEventListener('resize', this.onScroll, { passive: true });
     this.onScroll();
   }
 
   componentWillUnmount() {
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
     removeEventListener('scroll', this.onScroll);
     removeEventListener('resize', this.onScroll);
   }
 
   renderVals() {
     return {
+      backLabel: this.state.narrow ? 'none' : 'inline',
+      backPad: this.state.narrow ? '7px 11px' : '7px 14px 7px 11px',
       barShift: this.state.scrolled ? 'translateY(0)' : 'translateY(-101%)',
       barOpacity: this.state.scrolled ? 1 : 0,
       readPercent: Math.round(this.state.read * 100) + '%',

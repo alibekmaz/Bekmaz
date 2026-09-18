@@ -48,9 +48,9 @@
     </section>
   </sc-for>
 
-  <footer style="position:relative; z-index:10; scroll-snap-align:center; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px 24px;">
+  <footer style="position:relative; z-index:10; scroll-snap-align:center; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px clamp(24px,7vw,120px);">
     <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(36px,5vw,64px); font-weight:600; letter-spacing:-.02em; margin:0 0 14px;">Thank you</h2>
-    <p style="font-size:17px; color:rgba(245,243,238,.6); max-width:400px; margin:0 auto 36px; line-height:1.6;">Happy to see you here. A few useful links.</p>
+    <p style="font-size:17px; color:rgba(245,243,238,.6); max-width:400px; margin:0 0 36px; line-height:1.6;">Happy to see you here. A few useful links.</p>
     <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
       <a href="https://drive.google.com/file/d/1JxNRFauZtWUKQrry1PkJ9B6tmM_8-cW_/view" style="background:#F5F3EE; color:#0B0B0D; padding:14px 26px; border-radius:999px; font:600 15px 'Inter',sans-serif; text-decoration:none;" style-hover="background:#fff">Download CV</a>
       <a href="About.dc.html" style="border:1px solid rgba(245,243,238,.3); color:#F5F3EE; padding:14px 26px; border-radius:999px; font:600 15px 'Inter',sans-serif; text-decoration:none;" style-hover="border-color:#F5F3EE">About me</a>
@@ -61,7 +61,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 const STUDIES = [
-  { num:"01", tag:"LANDING PAGE · DATA-DRIVEN UX", accent:"#FF5A36", side:"flex-start",
+  { num:"01", tag:"LANDING PAGE · DATA-DRIVEN UX", accent:"#FF5A36", side:"flex-end",
     title:"Data-driven landing page redesign, backed by MVP insights",
     description:"A legal-services platform helping people find the right lawyer. We studied MVP usage data, then reworked the landing page to lift acquisition and sharpen the value proposition.", link:"Case Study 01 Dadsun.dc.html" },
   { num:"02", tag:"B2B PRODUCT · REDESIGN", accent:"#3AD1A0", side:"flex-end",
@@ -72,7 +72,10 @@ const STUDIES = [
     description:"A mobile platform for FIFA players who wanted more control than in-game matchmaking: creating paid matches, joining tournaments, managing prize pools and submitting verified results.", link:"Case Study 03 SamChamp.dc.html" },
   { num:"04", tag:"FINTECH · DIGITAL KYC", accent:"#3AD1A0", side:"flex-end",
     title:"Designing a KYC flow for a stock brokerage",
-    description:"A brokerage in a tightly regulated market. We turned a paper-based onboarding process into a fully digital flow while working inside real compliance constraints.", link:"Case Study 04 Arman.dc.html" }
+    description:"A brokerage in a tightly regulated market. We turned a paper-based onboarding process into a fully digital flow while working inside real compliance constraints.", link:"Case Study 04 Arman.dc.html" },
+  { num:"05", tag:"TRAVEL · UI IMPROVEMENT STUDY", accent:"#4DA6E8", side:"flex-start",
+    title:"A case study of possible UI improvements",
+    description:"A timeboxed exercise on a hotel metasearch platform: two UI proposals for the desktop result page, one simplifying the cards and the map, one offering four reasoned suggestions instead of an endless list.", link:"Case Study 05 Trivago.dc.html" }
 ];
 
 class Component extends DCLogic {
