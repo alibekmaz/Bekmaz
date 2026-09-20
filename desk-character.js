@@ -1,4 +1,4 @@
-// <desk-character> — the same Spline figure, framed close on the laptop and driven by a
+// <desk-character>: the same Spline figure, framed close on the laptop and driven by a
 // 5.5s looping "working" performance (typing, glance up, confident nod) inside its container.
 const THREE_URL = 'https://unpkg.com/three@0.184.0/build/three.module.js';
 const LOADER_URL = 'https://unpkg.com/three@0.184.0/examples/jsm/loaders/GLTFLoader.js';

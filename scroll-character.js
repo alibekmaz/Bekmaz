@@ -1,4 +1,4 @@
-// <scroll-character> — loads the exported Spline scene (geometry only; materials are
+// <scroll-character>: loads the exported Spline scene (geometry only; materials are
 // re-applied here) and drives a scroll-linked camera POV around it.
 const THREE_URL = 'https://unpkg.com/three@0.184.0/build/three.module.js';
 const LOADER_URL = 'https://unpkg.com/three@0.184.0/examples/jsm/loaders/GLTFLoader.js';
@@ -346,7 +346,7 @@ class ScrollCharacter extends HTMLElement {
     x.fillStyle = '#100E13'; x.fillRect(0, 0, W, 54);
     x.fillStyle = accent; x.beginPath(); x.arc(34, 27, 9, 0, 7); x.fill();
     x.fillStyle = dim; x.font = '500 20px Inter, sans-serif';
-    x.fillText('portfolio — hero', 60, 34);
+    x.fillText('portfolio / hero', 60, 34);
 
     // left tool rail
     x.fillStyle = '#100E13'; x.fillRect(0, 54, 74, H - 54);
@@ -582,13 +582,14 @@ class ScrollCharacter extends HTMLElement {
 
   // shift = horizontal lens shift (NDC). Negative pushes the character right, positive left.
   static KEYS = [
-    { p: 0.000, pos: [-3.36, 1.72, 6.01], look: [-0.7, 0.9, 0.15], fov: 34, shift: -0.28 },
-    { p: 0.162, pos: [4.16, 1.90, 5.34], look: [-0.6, 0.95, 0.2], fov: 36, shift: 0.72 },
-    { p: 0.331, pos: [-4.08, 0.57, 5.62], look: [0.85, 1.05, 0.2], fov: 34, shift: 0.19 },
-    { p: 0.500, pos: [-4.44, 0.98, 3.91], look: [0.8, 0.9, 0.1], fov: 38, shift: -0.69 },
-    { p: 0.669, pos: [-2.45, 3.81, -5.08], look: [0.65, 0.8, 0], fov: 42, shift: 0.49 },
-    { p: 0.838, pos: [-4.97, 1.70, 4.34], look: [1.75, 1.15, 0.1], fov: 30, shift: -0.89 },
-    { p: 1.000, pos: [-3.36, 1.72, 6.01], look: [-0.7, 0.9, 0.15], fov: 34, shift: 0.72 }
+    { p: 0.000, pos: [-3.29, 1.70, 5.87], look: [-0.7, 0.9, 0.15], fov: 30.6, shift: -0.28 },
+    { p: 0.138, pos: [4.06, 1.88, 5.23], look: [-0.6, 0.95, 0.2], fov: 32.4, shift: 0.72 },
+    { p: 0.283, pos: [-2.39, 3.75, -4.98], look: [0.65, 0.8, 0], fov: 37.8, shift: 0.49 },
+    { p: 0.428, pos: [-4.33, 0.98, 3.83], look: [0.8, 0.9, 0.1], fov: 34.2, shift: -0.70 },
+    { p: 0.572, pos: [-4.78, 1.69, 4.22], look: [1.75, 1.15, 0.1], fov: 27, shift: 0.20 },
+    { p: 0.717, pos: [-3.98, 0.58, 5.50], look: [0.85, 1.05, 0.2], fov: 30.6, shift: -0.70 },
+    { p: 0.862, pos: [4.06, 1.88, 5.23], look: [-0.6, 0.95, 0.2], fov: 32.4, shift: 0.72 },
+    { p: 1.000, pos: [-2.39, 3.75, -4.98], look: [0.65, 0.8, 0], fov: 37.8, shift: 0.49 }
   ];
 
   sampleCamera(p) {
